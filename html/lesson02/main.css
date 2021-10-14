@@ -1,0 +1,24 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: "Google Sans", serif;
+    font-size: large;
+    text-align: justify;
+}
+p {
+    text-indent: 1.5em;
+}
+li {
+    font-style: italic;
+}
+a {
+    text-decoration: none;
+    color: navy;
+}
+.content > li {
+    font-style: normal;
+}
+img {
+    width: 350px;
+}
+
