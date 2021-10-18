@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: "Google Sans", serif;
+    font-size: large;
+    text-align: justify;
+}
+
+div {
+    padding: 20px;
+    margin: 20px;
+}
+
+li {
+    font-style: italic;
+}
+
+.header {
+    font-size: xxx-large;
+}
+
+.section_header1 {
+    font-size: xx-large;
+    padding: 10px;
+    margin: unset;
+}
+.section_header2 {
+    font-size: x-large;
+    padding: 10px;
+    margin: unset;
+}
+
+.content {
+    display: table-cell;
+    vertical-align: top;
+    padding: 5px;
+}
+
+img {
+    width: 350px;
+    padding: 5px;
+}
+
+#top {
+    background: darkred;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#impact {
+    background: #fff8f6;
+}
+
+#discography {
+    background: #fff8f6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
