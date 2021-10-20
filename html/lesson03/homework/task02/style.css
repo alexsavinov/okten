@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_main {
+    height: 300px;
+    display: flex;
+}
+
+.header {
+    background: royalblue;
+    flex-basis: 100px;
+}
+
+.nav {
+    background: darkslategrey;
+    flex-basis: 70px;
+}
+
+.main {
+    background: darkturquoise;
+    flex-grow: 1;
+}
+
+.aside {
+    background: cornflowerblue;
+    flex-basis: 200px
+}
+
+.footer {
+    background: lightskyblue;
+    flex-basis: 100px;
+}
