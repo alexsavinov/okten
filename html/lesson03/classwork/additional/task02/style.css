@@ -1,0 +1,248 @@
+/* top */
+
+.container {
+    /*background: black;*/
+    height: 2200px;
+    display: flex;
+    /*row-gap: 5px;*/
+    flex-direction: column;
+}
+
+.container-header {
+    background: lightgrey;
+    flex-basis: 100px;
+    display: flex;
+    column-gap: 20px;
+    padding-right: 60px;
+}
+
+.header {
+    background: grey;
+    flex-grow: 1;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 15px 70px 15px 40px;
+    flex-grow: unset;
+}
+
+.btn {
+    margin-top: 50px;
+    height: 15px;
+    border-radius: 15px;
+}
+
+/* middle */
+
+.container-main {
+    background: lightgrey;
+    display: flex;
+    flex-basis: 500px;
+    column-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-main .text-h2 {
+    margin: 2px;
+    width: 40%;
+}
+
+.container-main .text-h2:nth-child(2) {
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.container-main form {
+    width: 60%;
+}
+
+.main {
+    height: fit-content;
+    width: fit-content;
+}
+
+.main input[type=text] {
+    width: 85%;
+}
+
+.main input[type=button] {
+    width: 10%;
+}
+
+.main input {
+    border-radius: 15px;
+    flex-grow: 1;
+    border: none;
+}
+
+/* destinations */
+
+.container-main-destinations {
+    background: white;
+    flex-basis: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-h1 {
+    height: 15px;
+    width: 50%;
+    background: grey;
+    border-radius: 15px;
+    margin: 2px;
+}
+
+.text-h2 {
+    height: 15px;
+    width: 40%;
+    background: silver;
+    border-radius: 15px;
+    margin: 2px;
+}
+
+/* destinations - blocks */
+
+.container-destinations {
+    display: flex;
+    background: white;
+    flex-direction: column;
+    flex-basis: 600px;
+    row-gap: 5px;
+}
+
+.container-destinations-row {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    height: 33.33%;
+}
+
+.main-destinations {
+    background: lightgrey;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.double {
+    flex-grow: 2;
+    padding-right: 9px;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width60 {
+    width: 60%;
+}
+
+.width80 {
+    width: 80%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+/* offers */
+
+.container-offers {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 900px;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.container-offers-top {
+    background: white;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-offers-mid {
+    flex-grow: 4;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.container-offers-item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    padding-bottom: 20px;
+}
+
+.offer1 {
+    background: lightgrey;
+    flex-grow: 31;
+    margin-left: 25px;
+}
+
+.offer2 {
+    background: white;
+    flex-grow: 69;
+}
+
+/* footer */
+
+.container-footer {
+    background: lightgrey;
+    display: flex;
+    flex-flow: row;
+    flex-basis: 70px;
+    padding: 3px 0 3px 20px;
+}
+
+.footer {
+    padding: 10px;
+    flex-grow: 1;
+    /*background: darkbluekorange;*/
+    display: flex;
+    flex-flow: column;
+    /*flex-basis: 60px;*/
+}
+
+.height5 {
+    height: 5px;
+    margin: 2px;
+}
+
+.container-circles {
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 80px;
+    margin-left: 5px;
+}
+
+.small-circle {
+    background: silver;
+    flex-grow: 1;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
