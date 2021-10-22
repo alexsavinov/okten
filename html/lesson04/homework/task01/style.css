@@ -1,0 +1,44 @@
+:root {
+    --color_main: darkgrey;
+    --color_bg: white
+}
+
+/** classes **/
+.container__column {
+    display: flex;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-direction: column;
+}
+
+.container__row {
+    display: flex;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-direction: row;
+}
+
+.top {
+    background: var(--color_bg);
+}
+
+.header {
+    background: var(--color_main);
+    flex-basis: 150px;
+}
+
+.main {
+    height: 300px;
+    /*display: flex;*/
+    /*column-gap: 10px;*/
+}
+
+.main__left {
+    background: var(--color_main);
+    flex-grow: 1;
+}
+
+.main__right {
+    background: var(--color_main);
+    flex-grow: 2;
+}

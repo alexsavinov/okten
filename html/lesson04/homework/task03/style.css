@@ -1,0 +1,41 @@
+.container__column {
+    display: flex;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-direction: column;
+}
+
+.container__row {
+    display: flex;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-direction: row;
+}
+
+#header {
+    background: palegoldenrod;
+    flex-basis: 100px;
+}
+
+.main {
+    height: 300px;
+}
+
+#menu {
+    background: plum;
+    flex-basis: 200px;
+}
+
+.content {
+    flex-grow: 2;
+}
+
+.post {
+    background: lightskyblue;
+    flex-grow: 1;
+}
+
+#footer {
+    background: palegoldenrod;
+    flex-basis: 100px;
+}

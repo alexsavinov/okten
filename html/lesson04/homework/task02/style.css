@@ -1,0 +1,42 @@
+.container__column {
+    display: flex;
+    /*row-gap: 10px;*/
+    /*column-gap: 10px;*/
+    flex-direction: column;
+}
+
+.container__row {
+    display: flex;
+    /*row-gap: 10px;*/
+    /*column-gap: 10px;*/
+    flex-direction: row;
+}
+
+.header {
+    background: royalblue;
+    flex-basis: 100px;
+}
+
+.nav {
+    background: darkslategrey;
+    flex-basis: 70px;
+}
+
+.main {
+    height: 300px;
+}
+
+.main__left {
+    background: darkturquoise;
+    flex-grow: 1;
+}
+
+.main__right {
+    background: cornflowerblue;
+    flex-basis: 200px
+}
+
+.footer {
+    background: lightskyblue;
+    flex-basis: 100px;
+}

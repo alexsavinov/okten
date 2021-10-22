@@ -1,0 +1,32 @@
+.container__column {
+    display: flex;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-direction: column;
+}
+
+.container__row {
+    display: flex;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-direction: row;
+}
+
+.widgets {
+    background: royalblue;
+    flex-basis: 300px;
+}
+
+.main {
+    height: 300px;
+}
+
+.widget {
+    background: #182da7;
+    flex-grow: 1;
+}
+
+.contact {
+    background: royalblue;
+    flex-basis: 500px;
+}
