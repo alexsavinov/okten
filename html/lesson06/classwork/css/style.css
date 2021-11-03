@@ -1,0 +1,33 @@
+body {
+    background-image: url("../image/bg.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100vm;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #FF7400;
+    border: #FF7400;
+}
+
+h1, h2 {
+    color: #FF7400;
+    font-family: Tinos;
+}
+
+.header__main {
+    height: 300px;
+}
+
+.dom:after, .dom:before {
+    content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration: line-through;
+    margin: 5px;
+}
+
+.main {
+    height: 400px;
+    z-index: -1;
+    position: relative;
+    bottom: -30%;
+}

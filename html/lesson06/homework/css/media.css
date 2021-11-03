@@ -1,0 +1,125 @@
+@media screen and (max-width: 320px) {
+
+    .mobile {
+        display: initial;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .wrapper {
+        max-width: 320px;
+    }
+
+    .header__top {
+        margin-top: 0px;
+    }
+
+    .header__logo img {
+        margin-top: 20px;
+        margin-left: 14px;
+        width: 45px;
+        height: 30px;
+    }
+
+    .nav__btn__mobile {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        margin-top: 26px;
+        margin-right: 17px;
+    }
+
+    .nav__btn__mobile div {
+        height: 3px;
+        width: 31px;
+        background-color: #FF7400;
+        border-radius: 2px;
+    }
+
+    .header__tittle {
+        margin-top: 0px;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+    }
+
+    .header__tittle h2 {
+        font-size: 30px;
+        line-height: 34px;
+        margin-left: 0px;
+        margin-top: 250px; /* 303-53*/
+    }
+
+    .header__tittle h1 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .header__tittle p::before,
+    .header__tittle p::after {
+        display: none;
+    }
+
+    .header__tittle p {
+        font-size: 15px;
+        line-height: 21px;
+        display: initial;
+        margin-top: 0px;
+    }
+
+    .header__main_btn {
+        display: initial;
+        height: 100vh;
+    }
+
+    .header__button {
+        background-color: #FF7400;
+        font-weight: bold;
+        font-size: 14px;
+        color: #FFFFFF;
+        border: 0px;
+        cursor: pointer;
+    }
+
+    .main {
+        height: 800px;
+    }
+
+    .main__button {
+        width: 137px;
+        height: 47px;
+        margin-top: 0px;
+    }
+
+    .header__main .header__button {
+        margin-top: 45px;
+    }
+
+    .main__intro {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+        align-items: center;
+        top: 698px;
+    }
+
+    .main__intro_item {
+        width: 290px;
+        height: 276px;
+    }
+
+    .main__intro_item img {
+        padding-top: 25px;
+    }
+
+    .main__intro_item p {
+        font-size: 22px;
+        line-height: 25px;
+        color: #656363;
+    }
+
+}

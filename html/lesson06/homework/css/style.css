@@ -1,0 +1,255 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Tinos', serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0;
+    width: 100%;
+}
+
+.desktop {
+    display: initial;
+}
+
+.mobile {
+    display: none;
+}
+
+.header {
+    height: 800px;
+    background: url("../image/bg.png") no-repeat center/cover;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.header__logo img {
+    width: 100px;
+    height: 68px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.nav {
+    height: 51px;
+    display: flex;
+    column-gap: 23px;
+    align-items: center;
+    border-right: 1px solid white;
+    padding-right: 25px;
+}
+
+.nav__item a {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav__item img {
+    width: 18px;
+    padding-left: 20px;
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+    column-gap: 45px;
+}
+
+.header__phone {
+    width: 154px;
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.header__phone-number {
+    font-size: 18px;
+    line-height: 19px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__button {
+    height: 47px;
+    width: 157px;
+    background-color: #FF7400;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    border: 0px;
+    cursor: pointer;
+}
+
+.header__tittle {
+    color: #D67E35;
+    margin-top: 201px; /* 322-121 */
+    width: 500px;
+}
+
+.header__tittle h2 {
+    font-size: 50px;
+    line-height: 57px;
+    margin-left: 24px; /* 199-175 */
+}
+
+.header__tittle h1 {
+    font-size: 80px;
+    line-height: 92px;
+}
+
+.header__tittle p {
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.header__tittle p::before,
+.header__tittle p::after {
+    content: "";
+    display: block;
+    width: 61px;
+    height: 2px;
+    background-color: #C4C4C4;
+}
+
+.header__tittle p::before {
+    margin-right: 10px;
+}
+
+.header__tittle p::after {
+    margin-left: 10px;
+}
+
+.header__main .header__button {
+    margin-top: 21px;
+}
+
+.header__main_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.main__button {
+    width: 137px;
+    height: 47px;
+}
+
+.main {
+    background-color: white;
+    height: 400px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main__intro {
+    display: flex;
+    flex-direction: row;
+    column-gap: 31px;
+    position: absolute;
+    top: 693px;
+    justify-content: center;
+}
+
+.main__intro_item {
+    width: 349px;
+    height: 328px;
+    background-color: white;
+    box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Tinos;
+    font-size: 26px;
+    text-align: center;
+    color: #fdfdfd;
+}
+
+.main__intro_item img {
+    width: 87px;
+    height: 87px;
+    margin: 13px 23px 4px 16px;
+    padding-top: 35px;
+}
+
+.main__intro_item h1 {
+    color: #2C2C2C;
+}
+
+.main__intro_item h1 span {
+    line-height: 30px;
+    color: #BB8F5F;
+}
+
+.main__intro_item p {
+    line-height: 30px;
+    color: #656363;
+}
