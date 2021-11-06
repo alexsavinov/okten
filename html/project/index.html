@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Project | HTML/CSS</title>
+</head>
+<body>
+
+<!-- MODAL -->
+
+<!-- Modal / Town -->
+<div class="modal fade" id="TownModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TownModalLabel">Выберите свой город</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">
+                    <input type="text" class="form-control" id="TownFormControlInput1" placeholder="Ваш город">
+                    <ul class="list-unstyled p-2 fw-bold">
+                        <li>Москва</li>
+                        <li>Санкт-Петербург</li>
+                        <li>Краснодар</li>
+                        <li>Екатеринбург</li>
+                        <li>Ростов-на-Дону</li>
+                        <li>Самара</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal / Card -->
+<div class="modal" id="CardModal" tabindex="-1">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header flex-row align-items-stretch justify-content-center">
+                <div>
+                    <img src="media/card__goods.png" alt="">
+                </div>
+                <div class="d-flex flex-column mt-1">
+                    <h5 class="modal__card__header">Товар добавлен в корзину</h5>
+                    <p class="modal__card__desc">Intermediate accumelator sleeve</p>
+                </div>
+                <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal / Call -->
+<div class="modal" id="CallModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="modalBasicLabel">Заказать звонок</h5>
+                <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-text mb-3">
+                    <label for="user__name">Ваше имя</label>
+                    <input type="email" class="form-control" id="user__name" placeholder="">
+                </div>
+                <div class="form-text mb-3 input-group d-flex flex-column">
+                    <label for="user__tel">Номер телефона</label>
+                    <div class="dropdown d-flex">
+                        <button class="btn__tel btn btn-outline-dark dropdown-toggle" type="button">
+                            <img src="media/flag.png" alt=""><span class="caret"></span>
+                        </button>
+                        <input type="tel" class="form-control" id="user__tel" placeholder="+7(999) 999-99-99"
+                               inputmode="tel">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn__custom btn btn-primary btn-lg w-100">Заказать звонок</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal / Search -->
+<div class="modal" id="CardSearch" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="d-flex flex-column fs-6 m-3">
+                <p class="text-secondary small">Найденные трансмиссии:</p>
+                <p class="ms-3">6eT40</p>
+                <p class="ms-3">6eT40</p>
+                <p class="ms-3">6eT40</p>
+                <p class="text-secondary small">Найденные товары:</p>
+                <p class="ms-3">Насос - Артикул / 43233</p>
+                <p class="ms-3">Соленоид - Артикул / 4493934-22</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header class="header color-darkblue">
+    <nav class="navbar navbar-expand navbar-dark bg-transparent justify-content-between">
+        <div class="container-fluid ms-0 ms-lg-auto me-0 me-lg-auto">
+            <img class="d-none d-sm-block m-1" src="media/geo-white.svg" alt="geo-white">
+            <div class="navbar-brand">Ваш город:
+                <a class="navbar-brand town text-decoration-underline" data-bs-toggle="modal"
+                   data-bs-target="#TownModal" href="#">Москва</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWithDropdown"
+                    aria-controls="navbarWithDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse show justify-content-between" id="navbarWithDropdown">
+                <div class="d-flex d-none d-md-block">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active dropdown-toggle" aria-current="page" href="#">Информация</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle text-white" href="#">Сотрудничество</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex">
+                    <div class="navbar-nav nav-item d-none d-lg-block">
+                        <a class="nav-link text-white" aria-current="page" href="#">Доставка</a>
+                    </div>
+                    <div class="navbar-nav nav-item d-none d-lg-block">
+                        <a class="nav-link text-white" aria-current="page" href="#">Оплата</a>
+                    </div>
+                    <div class="navbar-nav nav-item d-none d-lg-block">
+                        <a class="nav-link text-white" aria-current="page" href="#">Гарантия</a>
+                    </div>
+                    <div class="navbar-nav nav-item d-none d-lg-block">
+                        <a class="nav-link text-white" aria-current="page" href="#">Новости</a>
+                    </div>
+                    <div class="navbar-nav nav-item d-none d-lg-block">
+                        <a class="nav-link text-white" aria-current="page" href="#">Журнал</a>
+                    </div>
+                    <div class="navbar-nav nav-item d-none d-lg-block">
+                        <a class="nav-link text-white" aria-current="page" href="#">О магазине</a>
+                    </div>
+                    <div class="navbar-nav nav-item d-none d-lg-block">
+                        <a class="nav-link text-white" aria-current="page" href="#">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex show d-xl-none d-xl-none d-lg-none">
+            <a class="nav-link dropdown-toggle text-white" href="#">Еще</a>
+        </div>
+    </nav>
+</header>
+
+<!-- HEAD -->
+
+<div class="head shadow">
+    <div class="container-fluid">
+
+        <!-- HEAD TOP -->
+        <div class="head__top d-flex align-items-center row">
+
+            <div class="logo d-flex align-items-center align-items-center col-6 col-sm-6 col-md-4 col-lg-3">
+                <div class="logo__img1">
+                    <img src="media/logo.png" alt="logo" class="logo__img">
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="logo__text1 mb-1 mb-lg-0 mb-xl-0">AVT-ZAP</div>
+                    <div class="logo__text2 mb-lg-2 text-nowrap">Интернет-магазин запчастей<br>для АКПП</div>
+                </div>
+            </div>
+
+            <div class="address d-none d-md-flex d-flex flex-column flex-lg-row text-start justify-content-lg-between col-4 col-md-4 col-lg-5">
+                <div class="d-flex align-items-center text-end text-nowrap">
+                    <img class="m-1 clock" src="media/time.svg" alt="time">
+                    Мы работаем: будни - 9:00-21:00<br>сб. - 10:00-15:00
+                </div>
+
+                <div class="pt-2">
+                    <img class="m-1 geo-black" src="media/geo-black.svg" alt="geo-black">
+                    Невский пр-т, д. 45
+                </div>
+            </div>
+
+            <div class="contact d-flex flex-column-reverse align-items-end align-items-lg-center flex-lg-row col-6 col-sm-6 col-md-4">
+                <div class="contact__item pt-3 pt-lg-0 col d-flex">
+                    <buttom class="whatsapp btn p-0">
+                        <a class="text-decoration-none text-nowrap text-black ms-1 ms-lg-2 me-1 me-lg-2" href="#">
+                            <img src="media/whatsapp.png" alt="geo-black">
+                            Напишите нам в WhatsApp
+                        </a>
+                    </buttom>
+                </div>
+
+                <div class="contact__item col d-flex flex-column text-end">
+                    <div class="phone">+7 383 291 92 86</div>
+                    <a class="phone__link text-dark text-nowrap" data-bs-toggle="modal" data-bs-target="#CallModal"
+                       href="#">форма обратной связи</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- HEAD BOTTOM -->
+        <div class="head__bottom align-items-center d-flex flex-row justify-content-between">
+            <button type="button"
+                    class="button__catalog btn__custom btn btn-primary btn-lg d-flex align-items-center justify-content-center gap-2 me-2 me-lg-4">
+                <div class="d-flex flex-column">
+                    <div class="button__line mt-lg-1"></div>
+                    <div class="button__line mt-1"></div>
+                    <div class="button__line mt-1"></div>
+                </div>
+                <span class="d-none d-lg-block">Каталог</span>
+            </button>
+
+            <div class="search input-group input-group-lg flex-nowrap mw-50">
+                <input type="text" class="form-control" placeholder="Поиск по наименованию или артикулу"
+                       aria-label="Поиск по наименованию или артикулу" aria-describedby="basic-addon2">
+                <span class="input-group-text btn-primary" id="basic-addon2">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#CardSearch">
+                    <img src="media/search.svg" alt="search" class="d-md-none mb-1">
+                    <span class="chapters__text3 d-none d-md-block text-light">Найти</span>
+                </a>
+             </span>
+            </div>
+
+            <div class="buttons__user d-flex align-items-center justify-content-between ms-2 ms-lg-5 d-none d-md-flex">
+                <a href="#" class="button__user btn d-flex flex-column flex-lg-row gap-2 align-items-center">
+                    <img src="media/user.svg" alt="user" class="img__user">
+                    <span class="button__user__link">Войти</span>
+                </a>
+                <a href="#" class="button__user btn d-flex flex-column flex-lg-row gap-2 align-items-center">
+                    <img src="media/heart.svg" alt="heart" class="img__user">
+                    <span class="button__user__link">Избранное</span>
+                </a>
+                <a href="#"
+                   class="button__user btn d-flex flex-column flex-lg-row gap-1 align-items-center text-nowrap text-start">
+                    <img src="media/cart2.svg" alt="cart" class="img__user">
+                    <span class="button__user__link button__user__card d-flex">В корзине<br>нет товаров</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- GOODS -->
+
+<div class="goods container-fluid">
+    <div class="row pt-4">
+
+        <!-- PROMO-1 -->
+        <div id="carouselExampleCaptions" class="carousel slide col-lg-9 col-md-8 col-12" data-mdb-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="goods__carousel-tem carousel-item active d-flex align-items-start">
+                    <img src="media/goods.png" class="d-block"/>
+                    <div class="goods__carousel-caption carousel-caption">
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <div class="goods__left d-flex flex-column align-items-start justify-content-between text-dark text-start">
+                                <p class="goods__text1 text-nowrap">Сцепление в сборе</p>
+
+                                <p class="goods__text2 text-decoration-underline">0AMCLUTCH</p>
+                                <div class="d-flex align-items-lg-end flex-lg-row flex-column-reverse gap-lg-2">
+                                    <p class="goods__text3 ms-lg-0 m-0">14 499,99</p>
+                                    <p class="goods__text4 text-decoration-line-through m-0">18 550,99 ₽</p>
+                                </div>
+                                <button class="goods__btn-cart btn btn-primary btn-lg d-flex align-items-center gap-2 mt-2 mt-md-4">
+                                    <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                    <span>В корзину</span>
+                                </button>
+
+                            </div>
+                            <div class="goods__right">
+                                <img class="disks" src="media/disks.png" alt="">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions"
+                    data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions"
+                    data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- PROMO-2 -->
+        <div class="promo col-lg-3 col-md-4 col-12 d-flex row g-0 m-0 p-md-0 p-3 gap-md-2 align-items-center align-items-lg-stretch">
+
+            <div class="promo__item col-md-12 col-5 card justify-content-between p-3 pe-2 pt-1 me-2">
+                <p class="promo__text1 mb-1">Акция</p>
+                <div class="d-flex row">
+                    <div class="col-lg-4 col-3 p-1">
+                        <img src="media/promo1.png" class="img-fluid w-100" alt="card-horizontal-image">
+                    </div>
+                    <div class="col-lg-8 col-9 pt-0 pb-0">
+                        <p class="promo__text1 m-0 text-nowrap">Обгонная муфта<br>гидротрансформатор</p>
+                        <p class="promo__text2 m-0">BW-SP-2 SONNAX</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-lg-end flex-row flex-sm-row flex-md-column flex-lg-row
+                                    flex-md-column-reverse align-items-baseline">
+                                <p class="promo__text3 m-0">4 430₽</p>
+                                <p class="promo__text4 text-decoration-line-through ms-2 ms-lg-2 m-0">5 430₽</p>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo__item col-md-12 col-5 card justify-content-between p-3 pe-2 pt-1">
+                <p class="promo__text1 mb-1">Акция</p>
+                <div class="d-flex row">
+                    <div class="col-lg-4 col-3 p-1">
+                        <img src="media/promo2.png" class="img-fluid w-100" alt="card-horizontal-image">
+                    </div>
+                    <div class="col-lg-8 col-9 pt-0 pb-0">
+                        <p class="promo__text1 m-0 text-nowrap">Комплект фрикционных<br>дисков</p>
+                        <p class="promo__text2 m-0">BW-SP-2 SONNAX</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-lg-end flex-row flex-sm-row flex-md-column flex-lg-row
+                                    flex-md-column-reverse align-items-baseline">
+                                <p class="promo__text3 m-0">4 430₽</p>
+                                <p class="promo__text4 text-decoration-line-through ms-2 ms-lg-2 m-0">5 430₽</p>
+                            </div>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- CHAPTERS -->
+
+<div class="chapters container-fluid pt-1 pt-md-3 pt-lg-4">
+    <div id="carouselWithControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item d-flex active gap-2">
+
+                <div class="chapters__card card">
+                    <div class="row g-0">
+                        <div class="col-7 col-sm-8">
+                            <div class="card-body">
+                                <h5 class="chapters__text1 card-title">Масла</h5>
+                                <p class="chapters__text2 card-text text-nowrap">Трансмиссионное масло;<br>присалка в
+                                    масло акпп</p>
+                                <button class="chapters__text3 btn btn-primary">Перейти</button>
+                            </div>
+                        </div>
+                        <div class="col-5 col-sm-4">
+                            <img src="media/chapter1.png" class="img-fluid w-100" alt="card-horizontal-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapters__card card">
+                    <div class="row g-0">
+                        <div class="col-7 col-sm-8">
+                            <div class="card-body">
+                                <h5 class="chapters__text1 card-title">Фильтры</h5>
+                                <p class="chapters__text2 card-text text-nowrap">Масляный фильтр;<br>фильтр воздушный
+                                </p>
+                                <button class="chapters__text3 btn btn-primary">Перейти</button>
+                            </div>
+                        </div>
+                        <div class="col-5 col-sm-4">
+                            <img src="media/chapter2.png" class="img-fluid w-100" alt="card-horizontal-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapters__card card">
+                    <div class="row g-0">
+                        <div class="col-7 col-sm-8">
+                            <div class="card-body">
+                                <h5 class="chapters__text1 card-title">Радиаторы</h5>
+                                <p class="chapters__text2 card-text text-nowrap">Дополнительные<br>радиаторы</p>
+                                <button class="chapters__text3 btn btn-primary">Перейти</button>
+                            </div>
+                        </div>
+                        <div class="col-5 col-sm-4">
+                            <img src="media/chapter3.png" class="img-fluid h-100" alt="card-horizontal-image">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <a class="chapters__carousel-control carousel-control-prev bg-dark bg-opacity-25 w-aut" href="#recipeCarousel"
+           role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="chapters__carousel-control carousel-control-next bg-dark bg-opacity-25 w-aut" href="#recipeCarousel"
+           role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
+
+<!--ITEMS -->
+
+<div class="items container-fluid">
+    <div class="items__buttons d-flex gap-2 mt-5 mb-3">
+        <button class="items__button btn btn-primary btn-secondary">Подборки товаров</button>
+        <button class="items__button btn btn-outline-primary">Акции</button>
+        <button class="items__button btn btn-outline-primary">Сейчас покупают</button>
+    </div>
+
+    <div class="items__grid d-flex flex-column">
+        <div class="row d-flex g-2 align-items-end">
+            <!-- card 1-->
+            <div class="col-6 col-md-4 col-lg-3 item__card">
+                <div class="card">
+                    <img src="media/item1.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Intermediate accumelator sleeve</p>
+                        <p class="mt-4">
+                            <span class="item__text2 card-text">ЦЕНА</span>
+                            <span class="item__text3 card-text text-decoration-underline">по запросу</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 2-->
+            <div class="col-6 col-md-4 col-lg-3 item__card">
+                <div class="card">
+                    <img src="media/item2.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Комплект фрикционных дисков</p>
+                        <p class="mt-4">
+                            <span class="item__price1 card-text">4 430₽</span>
+                            <span class="item__price2 card-text text-decoration-line-through">5 430₽</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3-->
+            <div class="col-6 col-md-4 col-lg-3 item__card">
+                <div class="card">
+                    <img src="media/item3.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Intermediate accumelator<br>sleeve</p>
+                        <p class="mt-4">
+                            <span class="item__text2 card-text">ЦЕНА</span>
+                            <span class="item__text3 card-text text-decoration-underline">по запросу</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 1-->
+            <div class="col-6 col-md-4 col-lg-3 item__card">
+                <div class="card">
+                    <img src="media/item1.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Intermediate accumelator sleeve</p>
+                        <p class="mt-4">
+                            <span class="item__text2 card-text">ЦЕНА</span>
+                            <span class="item__text3 card-text text-decoration-underline">по запросу</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 2-->
+            <div class="col-6 col-md-4 col-lg-3 item__card">
+                <div class="card">
+                    <img src="media/item2.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Комплект фрикционных дисков</p>
+                        <p class="mt-4">
+                            <span class="item__price1 card-text">4 430₽</span>
+                            <span class="item__price2 card-text text-decoration-line-through">5 430₽</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3-->
+            <div class="col-6 col-md-4 col-lg-3 item__card">
+                <div class="card">
+                    <img src="media/item3.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Intermediate accumelator<br>sleeve</p>
+                        <p class="mt-4">
+                            <span class="item__text2 card-text">ЦЕНА</span>
+                            <span class="item__text3 card-text text-decoration-underline">по запросу</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 1-->
+            <div class="col-6 col-md-4 col-lg-3 item__card">
+                <div class="card">
+                    <img src="media/item1.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Intermediate accumelator sleeve</p>
+                        <p class="mt-4">
+                            <span class="item__text2 card-text">ЦЕНА</span>
+                            <span class="item__text3 card-text text-decoration-underline">по запросу</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 2-->
+            <div class="col-6 col-md-4 col-lg-3 item__card">
+                <div class="card">
+                    <img src="media/item2.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Комплект фрикционных дисков</p>
+                        <p class="mt-4">
+                            <span class="item__price1 card-text">4 430₽</span>
+                            <span class="item__price2 card-text text-decoration-line-through">5 430₽</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3-->
+            <div class="col-6 col-md-4 d-lg-none item__card">
+                <div class="card">
+                    <img src="media/item3.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Intermediate accumelator<br>sleeve</p>
+                        <p class="mt-4">
+                            <span class="item__text2 card-text">ЦЕНА</span>
+                            <span class="item__text3 card-text text-decoration-underline">по запросу</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 1-->
+            <div class="col-6 d-md-none d-lg-none item__card">
+                <div class="card">
+                    <img src="media/item1.png" class="item__img m-3" alt="card-img-top">
+                    <div class="d-flex m-3 mb-0">
+                        <span class="item__img__footer1 d-flex align-items-center"><img src="media/star.svg" alt="">4.5</span>
+                        <span class="item__img__footer2 ms-2">10 отзывов</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="item__text1 card-title">Intermediate accumelator sleeve</p>
+                        <p class="mt-4">
+                            <span class="item__text2 card-text">ЦЕНА</span>
+                            <span class="item__text3 card-text text-decoration-underline">по запросу</span>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center pe-4">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CardModal">
+                                <img src="media/cart-white.svg" alt="cart-white" class="cart-white">
+                                <span class="ms-1 items__button">В корзину</span>
+                            </button>
+                            <img class="img__item__btn" src="media/heart2.png" alt="">
+                            <img class="img__item__btn d-none d-lg-block" src="media/chart.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center m-4">
+        <button class="items__button btn btn-lg btn-outline-primary">Показать еще</button>
+    </div>
+</div>
+
+<!-- NEWS -->
+
+<div class="news__top__header container-fluid mt-5 mb-3">НОВОСТИ</div>
+<div class="news__top__line d-none d-md-block"></div>
+
+<div class="news container-fluid">
+    <div class="row">
+
+        <div class="col-12 col-md-4 col-lg-3 d-flex position-relative">
+            <div class="news__head d-flex flex-column align-items-center position-absolute">
+                <div class="news__head__circle rounded-circle d-none d-md-block"></div>
+                <div class="news__head__vertical d-none d-md-block"></div>
+                <div class="news__head__text rounded ps-3 pe-3">3 ноября</div>
+            </div>
+            <div class="news__main">
+                <p class="news__main__text1 text-decoration-underline">Изменения на сайте</p>
+                <p class="news__main__text2">
+                    Недавно на сайте мы ввели очередную порцию изменений, которые, как нам кажется, должны улучшить
+                    функциональность сайта и сделать его более удобным для пользователей. Реакция посетителей не
+                    заставила себя долго ждать...
+                </p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-3 d-flex position-relative">
+            <div class="news__head d-flex flex-column align-items-center position-absolute">
+                <div class="news__head__circle rounded-circle d-none d-md-block"></div>
+                <div class="news__head__vertical d-none d-md-block"></div>
+                <div class="news__head__text rounded ps-3 pe-3">2 ноября</div>
+            </div>
+            <div class="news__main">
+                <p class="news__main__text1 text-decoration-underline">Вышла новая версия для мобильных приложений</p>
+                <p class="news__main__text2 mb-0">
+                    Что нового в 2.0:
+                <ul class="news__list ps-0">
+                    <Li>— добавлена история поиска;</Li>
+                    <Li>— добавлена синхронизация с сервером;</Li>
+                    <Li>— испрвление ошибок.</Li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-3 d-flex position-relative">
+            <div class="news__head d-flex flex-column align-items-center position-absolute">
+                <div class="news__head__circle rounded-circle d-none d-md-block"></div>
+                <div class="news__head__vertical d-none d-md-block"></div>
+                <div class="news__head__text rounded ps-3 pe-3">1 ноября</div>
+            </div>
+            <div class="news__main">
+                <p class="news__main__text1 text-decoration-underline">
+                    Очередная порция обновлений для мобильных приложений
+                </p>
+                <p class="news__main__text2 mb-0">
+                    Что нового добавлено:
+                <ul class="news__list ps-0">
+                    <li>— поддержка пуш-уведомлений;</li>
+                    <li>— разделы для покупателей;</li>
+                    <li>— просмотр покупателя в заказах;</li>
+                    <li>— возможность поиска;</li>
+                    <li>— исправление ошибок.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-12 d-md-none d-lg-block col-lg-3 d-flex position-relative">
+            <div class="news__head d-flex flex-column align-items-center position-absolute">
+                <div class="news__head__circle rounded-circle d-none d-md-block"></div>
+                <div class="news__head__vertical d-none d-md-block"></div>
+                <div class="news__head__text rounded ps-3 pe-3">31 октября</div>
+            </div>
+            <div class="news__main">
+                <p class="news__main__text1 text-decoration-underline">
+                    Интерфейс заказов для покупателей стал более функциональным
+                </p>
+                <p class="news__main__text2">
+                    Он позволяет выводить все формируемые системой уведомления(e-mail, смс, web) в едином окне с
+                    системой удобной фильтрации поиска.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer bg-color bg-darktext-start text-white">
+    <div class="container-fluid p-2 pt-4 pb-0 pb-lg-4">
+
+        <section class="">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <div class="text-uppercase font-size-16 color-grey pb-1 mb-2">КАТАЛОГ</div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Каталог запчастей</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Масла</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Фильтра</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Радиаторы</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Sonnax</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Manual</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Новинки</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Акции</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <div class="text-uppercase font-size-16 color-grey pb-1 mb-2">РУБРИКАТОР</div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Доставка</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Оплата</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Гарантия</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Новости</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">Журнал</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none">О магазине</a></li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none">Контактная информация</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                    <div class="text-uppercase font-size-16 color-grey pb-1 mb-2">ИНФОРМАЦИЯ</div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">
+                            <a href="#!" class="text-white text-decoration-none text-nowrap">
+                                Пользовательское соглашение<br>об использовании персональных данных</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#!" class="text-white text-decoration-none text-nowrap">
+                                Политика конфиденциальности</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#!" class="text-white text-decoration-none text-nowrap">
+                                Соглашение на рассылку<br>рекламных материалов</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#!" class="text-white text-decoration-none text-nowrap">Политика возвратов</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#!" class="text-white text-decoration-none text-nowrap">Мы принимаем</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white text-decoration-none"><img src="media/visa.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0 row">
+
+                    <div class="col-lg-6 col-md-4">
+                        <div class="text-uppercase font-size-16 color-grey pb-1 mb-2">КОНТАКТЫ</div>
+                        <span>+7 383 291 92 86<br>info@avt-zap.ru</span>
+                    </div>
+
+                    <div class="col-lg-6 col-md-8">
+                        <div class="text-uppercase font-size-16 color-grey pb-1 mb-2 pt-4 pt-lg-0">АДРЕС</div>
+                        <span class="text-nowrap">г. Новосибирск,<br>ул. Планировочная, 5, офис 105</span>
+                    </div>
+
+                    <div class="col-lg-12 col-md-5 d-flex flex-lg-row flex-column gap-md-2 gap-lg-3 align-items-lg-center mt-2 mb-2 pt-3 pt-lg-0">
+                        <div class="font-size-16 color-grey text-nowrap">Мы онлайн, воспользуйтесь</div>
+                        <div class="text-nowrap">Форма обратной связи</div>
+                    </div>
+
+                    <div class="d-flex col-lg-12 col-md-7 flex-column">
+                        <form action="">
+                            <div class="row d-flex">
+                                <div class="col-auto">
+                                    <p class="pt-2 color-grey">
+                                        Подпишитесь на нашу рассылку и<br>вы первыми узнаете о скидках и акциях</p>
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="form-outline form-white mb-4 w-100">
+                                        <input type="email" id="form5Example29" class="form-control bg-dark"
+                                               placeholder="Введите ваш email"/>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-primary mb-4">Подписаться</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Section: Social media -->
+                        <section class="mb-0 d-flex justify-content-lg-end p-0">
+                            <a class="btn btn-floating m-1" href="#!" role="button">
+                                <img src="media/f_facebook.svg" alt=""></a>
+                            <a class="btn btn-floating m-1" href="#!" role="button">
+                                <img src="media/f_telegram.svg" alt=""></a>
+                            <a class="btn btn-floating m-1" href="#!" role="button">
+                                <img src="media/f_twitter.svg" alt=""></a>
+                            <a class="btn btn-floating m-1" href="#!" role="button">
+                                <img src="media/f_google-plus.svg" alt=""></a>
+                        </section>
+                        <!-- Section: Social media -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="container-fluid text-start color-grey p-3 pt-lg-3 pt-2">
+        2017 © ООО «АВТ-ЗАП» - запчасти для акпп
+    </div>
+    <!-- Copyright -->
+</footer>
+
+<!-- NAVBAR -->
+
+<nav class="navbar__bottom navbar fixed-bottom navbar-light bg-light d-md-none d-block">
+    <div class="container-fluid d-flex align-items-end">
+        <div class="btn d-flex flex-column align-items-center">
+            <img src="media/navbar_1.svg" alt="" class="">
+            <span class="navbar__bottom__btn">Главная</span>
+        </div>
+        <div class="btn d-flex flex-column align-items-center">
+          <span class="img__navbar_2 position-relative"><img src="media/navbar_2.svg" alt="" class="">
+            <img src="media/navbar_2_1.svg" alt="" class="img__navbar_2_1 position-absolute">
+          </span>
+            <span class="navbar__bottom__btn">Избранное</span>
+        </div>
+        <div class="btn d-flex flex-column align-items-center">
+          <span class="img__navbar_3 position-relative"><img src="media/navbar_3.svg" alt="" class="">
+            <img src="media/navbar_3_1.svg" alt="" class="img__navbar_2_1 position-absolute">
+          </span>
+            <span class="navbar__bottom__btn">Корзина</span>
+        </div>
+        <div class="btn d-flex flex-column align-items-center">
+            <img src="media/navbar_1.svg" alt="" class="">
+            <span class="navbar__bottom__btn">Профиль</span>
+        </div>
+    </div>
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

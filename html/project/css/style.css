@@ -1,0 +1,423 @@
+.color-darkblue {
+    background-color: #0F2438;
+}
+
+.bg-color {
+    background-color: #0C1A2A;
+}
+
+.color-grey {
+    color: #737E9B;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.navbar {
+    height: 36px;
+}
+
+.container-fluid {
+    width: 1200px; /* 1400 в исходном макете */
+    font-size: 14px;
+}
+
+.navbar-brand {
+    font-size: 14px;
+}
+
+.head {
+    height: 196px;
+}
+
+.head__top {
+    height: 130px;
+}
+
+.logo__text1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.logo__text2 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.address, .contact {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.whatsapp {
+    font-size: 12px;
+    background-color: #E1EFD0;
+}
+
+.contact__item {
+    font-size: 12px;
+
+}
+
+.phone {
+    font-size: 20px;
+}
+
+.geo-black {
+    width: 32px;
+}
+
+.button__line {
+    height: 3px;
+    width: 20px;
+    background-color: white;
+}
+
+.button__catalog {
+    width: 164px;
+    height: 53px;
+    box-sizing: border-box;
+}
+
+.search {
+    height: 53px;
+    box-sizing: border-box;
+}
+
+.buttons__user {
+    box-sizing: border-box;
+    width: 411px;
+}
+
+.button__user__link {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0F2438;
+}
+
+.button__user__card {
+    font-size: 12px;
+}
+
+.modal__card__header {
+    color: #005BB9;
+}
+
+.modal__card__desc {
+    font-size: 14px;
+}
+
+.btn__tel {
+    border-color: lightgrey;
+}
+
+.card {
+    background-color: #F4F5FA;
+}
+
+.disks {
+    width: 380px;
+}
+
+.carousel-caption {
+    left: 10%;
+    right: 5%;
+}
+
+.disks__price {
+    color: #9f9fae;
+    font-size: 18px;
+}
+
+.goods__carousel-tem {
+    width: 880px; /* 1008 */
+    height: 390px;
+}
+
+.goods__carousel-tem > img {
+    width: 880px;
+    height: 390px;
+}
+
+.cart-white {
+    height: 20px;
+}
+
+.promo__item {
+    height: 191px;
+    position: relative;
+}
+
+/* GOODS */
+.goods__text1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: #0A1A2C;
+}
+
+.goods__text2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #717171;
+}
+
+.goods__text3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 37px;
+    line-height: 43px;
+    color: #005BB9;
+}
+
+.goods__text4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #C2C5DA;
+}
+
+.promo__text1 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.promo__text2 {
+    font-size: 12px;
+    /*line-height: 14px;*/
+}
+
+.promo__text3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFB800;
+}
+
+.promo__text4 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #C2C5DA;
+}
+
+.goods__btn-cart {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.btn__custom, .btn-primary {
+    background-color: #005BB9;
+}
+
+/* CHAPTERS */
+.chapters__card {
+    width: 386px;
+    height: 181px;
+}
+
+.chapters__carousel-control {
+    width: min-content;
+}
+
+.chapters__text1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.chapters__text2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.chapters__text3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.item__card {
+    margin: 0px;
+}
+
+.item__card > .card {
+    background-color: white;
+    border: none;
+}
+
+/* ITEMS */
+.items__button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.item__img {
+    width: 170px;
+    height: 140px;
+}
+
+.item__img__footer1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFB800;
+}
+
+.item__img__footer2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0A1A2C;
+}
+
+.item__text1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #0A1A2C;
+}
+
+.item__text2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.item__text3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #005BB9;
+}
+
+.item__price1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFB800;
+}
+
+
+.item__price2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #C2C5DA;
+}
+
+.img__item__btn {
+    height: 21px;
+}
+
+/* NEWS */
+.news__top__header {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.news__top__line {
+    height: 9px;
+    background-color: #F5F5F5;
+}
+
+.news {
+    margin-bottom: 100px;
+}
+
+.news__head {
+    top: -9px;
+}
+
+.news__head__circle {
+    background-color: #0C1A2A;
+    height: 9px;
+    width: 9px;
+}
+
+.news__head__vertical {
+    background-color: #0C1A2A;
+    width: 1px;
+    height: 20px;
+}
+
+.news__head__text {
+    height: 22px;
+    background-color: #0C1A2A;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.news__main {
+    margin-top: 60px;
+}
+
+.news__main__text1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #005BB9;
+}
+
+.news__main__text2, .news__list {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #242424;
+}
+
+.news__list {
+    list-style-type: none;
+
+}
+
+.navbar__bottom {
+    height: 60px;
+}
+
+.navbar__bottom__btn {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.img__navbar_2_1 {
+    left: 18px;
+}
