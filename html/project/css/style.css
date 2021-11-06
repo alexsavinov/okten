@@ -64,7 +64,6 @@
 
 .contact__item {
     font-size: 12px;
-
 }
 
 .phone {
@@ -139,12 +138,12 @@
 }
 
 .goods__carousel-tem {
-    width: 880px; /* 1008 */
+    width: 870px; /* 1008 */
     height: 390px;
 }
 
 .goods__carousel-tem > img {
-    width: 880px;
+    width: 870px;
     height: 390px;
 }
 

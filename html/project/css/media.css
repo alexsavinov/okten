@@ -1,4 +1,4 @@
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1199px) {
 
     .container-fluid {
         font-size: 14px;
@@ -66,12 +66,12 @@
     }
 
     .goods__carousel-tem {
-        width: 620px; /* 1008 */
+        width: 630px; /* 1008 */
         height: 314px;
     }
 
     .goods__carousel-tem > img {
-        width: 620px;
+        width: 630px;
         height: 314px;
     }
 
@@ -128,7 +128,7 @@
     }
 
     .chapters__card {
-        width: 270px;
+        width: 320px;
         height: 149px;
     }
 
@@ -221,8 +221,27 @@
 
 }
 
+@media screen and (max-width: 991px) {
 
-@media screen and (max-width: 768px) {
+    .disks {
+        width: 220px;
+    }
+
+    .goods__carousel-caption {
+        left: 3%;
+        right: initial;
+    }
+
+    .goods__carousel-tem {
+        width: 480px;
+    }
+    .goods__carousel-tem > img {
+        width: 480px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
 
     .geo-al {
         display: none;
@@ -280,23 +299,22 @@
     }
 
     .promo {
-        min-width: 800px;
+        /*min-width: 800px;*/
     }
 
     .disks {
-        width: 260px;
+        width: 220px;
     }
 
     .goods__carousel-tem {
-        width: 620px;
-        height: 314px;
+        width: 538px;
+        height: 250px;
     }
 
     .goods__carousel-tem > img {
-        width: 620px;
-        height: 314px;
+        width: 538px;
+        height: 250px;
     }
-
 
     .promo__text1 {
         font-size: 12px;
@@ -329,7 +347,7 @@
     }
 
     .chapters {
-        min-width: 800px;
+        /*min-width: 800px;*/
     }
 
     .chapters__card {
@@ -435,29 +453,28 @@
 
 }
 
+@media screen and (max-width: 575px) {
 
-@media screen and (max-width: 576px) {
+    .disks {
+        width: 120px;
+    }
 
     .goods__carousel-tem {
-        width: 300px;
+        width: 295px;
         height: 195px;
     }
 
     .goods__carousel-tem > img {
-        width: 300px;
+        width: 295px;
         height: 195px;
     }
 
     .promo {
-        min-width: 600px;
+        /*min-width: 600px;*/
     }
 
     .chapters {
-        min-width: 800px;
-    }
-
-    .disks {
-        width: 120px;
+        /*min-width: 800px;*/
     }
 
     .goods__text1 {
@@ -478,10 +495,6 @@
     .goods__text4 {
         font-size: 14px;
         line-height: 16px;
-    }
-
-    .chapters {
-        min-width: 800px;
     }
 
     .item__img {
