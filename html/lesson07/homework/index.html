@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Homework | HTML/CSS: Lesson 07</title>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container-fluid">
+        <img src="images/logo.png" alt="logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Über Uns</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link active dropdown-toggle" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">Produkte</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">Peripherietechnik</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">Dienstleistungen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Klimatechnik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Presse</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PRODUCTS -->
+
+<div class="products container-fluid pt-4">
+    <div class="row">
+        <div class="products__text1 col-12 col-sm-6 d-flex flex-column align-items-center align-items-sm-start justify-content-around">
+            <p class="products__head1">Luftkondensierte<br>Kältemaschinen<br>& Kaltwassersätze<br></p>
+            <div class="products__line"></div>
+            <p class="d-none d-sm-block">
+                Aufgrund der kompakten Bauart werden platzsparende luftkondensierte Kompressionskältemaschinen
+                (umgangsspr. „Kaltwassersätze“) vielseitig zur Prozesskühlung und Gebäudeklimatisierung eingesetzt.
+            </p>
+            <div class="products__line d-none d-sm-block"></div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <img class="products__img1 w-100" src="images/goods1.png" alt="goods1" class="w-100">
+        </div>
+        <p class="products__text1 d-block d-sm-none">
+            Aufgrund der kompakten Bauart werden platzsparende luftkondensierte Kompressionskältemaschinen
+            (umgangsspr. „Kaltwassersätze“) vielseitig zur Prozesskühlung und Gebäudeklimatisierung eingesetzt.
+        </p>
+        <div class="col-12 col-sm-6">
+            <img class="products__img2 w-100" src="images/goods2.png" alt="goods2" class="w-100">
+        </div>
+        <div class="products__text2 col-12 col-sm-6">
+            <p class="products__head2">ENERGIEEFFIZIENZ IM FOKUS</p>
+            <div>
+                <p>
+                    Bei der Anschaffung sollte deshalb besonders auf <span class="fw-bold">energieeffiziente
+                    Systeme</span> geachtet werden, denn die Betriebskosten der Anlage überschreiten erfahrungsgemäß
+                    über die Lebensdauer hinweg die einmaligen Anschaffungskosten um ein vielfaches.
+                </p>
+                <p>
+                    Insofern sind die Themen Kompressortechnik und Einsatz von Freikühlung von besonderer Bedeutung,
+                    sowie Steuer- und Regelungstechnik besonders wichtig.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- STANDARDS -->
+
+<div class="standards row m-0 mt-2 mt-sm-5">
+    <div class="col-12 col-sm-5 pe-0 g-0">
+        <img class="w-100" src="images/standards.png" alt="standards">
+    </div>
+
+    <div class="standards__content col-12 col-sm-7 d-flex flex-column justify-content-center">
+        <p class="standards__header">MODERNSTE STANDARDS</p>
+        <p>
+            Aktuelle Richtlinien und Verordnungen bezüglich des <span class="fw-bold">Kältemittel Phase-Downs</span>
+            müssen berücksichtigt werden. Der langfristige Einsatz des Kältemittels muss sowohl nach ökonomischen als
+            auch strategischen Gesichtspunkten entschieden werden.
+        </p>
+        <p>
+            Alle unsere Kältemaschinen entsprechen dem modernsten Stand der Technik und werden in den
+            unterschiedlichsten Branchen eingesetzt. Unser Angebot umfasst ein <span class="fw-bold">breites Sortiment
+            an natürlichen und frigenen Kältemitteln</span>, die den aktuellsten Normen und Verordnungen entsprechen.
+        </p>
+    </div>
+</div>
+
+<!-- GOALS -->
+
+<div class="goals row me-0 d-flex flex-column-reverse flex-sm-row">
+    <div class="col-12 col-md-7 goals__text">
+        <p class="goals__header">
+            Unsere Spezialität besteht aus unseren Kaltwassersätzen mit integrierter
+            Freikühleinheit.
+        </p>
+        <p>
+            Doppelkanal Mikrochannel Wärmetauscher kühlen das Prozesswasser energiesparend über ambiente
+            Umgebungsluft.
+        </p>
+        <p>
+            <span class="fw-bold">Nur bei heißen Außentemperaturen erfolgt die Umschaltung auf Kompressionskälteerzeugung. Diese Maximierung
+            der Freikühlzeit erzielt größtmögliche Kosteneinsparungen</span> auch bei kleinen Nennleistungen.
+        </p>
+    </div>
+
+    <!-- color lines -->
+    <div class="col-12 col-md-5 d-flex flex-column boxes justify-content-center">
+        <div class="box d-flex flex-column shadow g-0">
+            <div class="box__line">
+                <div class="box__line1"></div>
+                <div class="box__line2"></div>
+            </div>
+            <div class="box__line">
+                <div class="box__line1"></div>
+                <div class="box__line2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BENEFITS -->
+
+<div class="benefits container-fluid d-flex flex-column mt-0 mt-sm-5">
+    <div class="d-flex justify-content-center m-3">
+        <h3>IHRE VORTEILE</h3>
+    </div>
+    <div class="benefits__grid g-0 row">
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben01.png" alt="ben01">
+                <span class="benefits__text">Geringe Stellfläche</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben02.png" alt="ben02">
+                <span class="benefits__text">Mit und ohne integrierter Freikühlung</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben03.png" alt="ben03">
+                <span class="benefits__text">Für Außentemperaturen bis +55°C</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben04.png" alt="ben04">
+                <span class="benefits__text">Für Außen- und Innenaufstellung erhältlich</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben05.png" alt="ben05">
+                <span class="benefits__text">Betriebsbereit bei Anlieferung</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben06.png" alt="ben06">
+                <span class="benefits__text">Automatische Freikühlschaltung für verringerten Energieverbrauch</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben07.png" alt="ben07">
+                <span class="benefits__text">Robustes Gehäuse für Außenaufstellung</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben08.png" alt="ben08">
+                <span class="benefits__text">Geringe Schallemissionen</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben09.png" alt="ben09">
+                <span class="benefits__text">Wetterfest und Langlebig</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="benefits__cell">
+                <img class="benefits__img" src="images/ben10.png" alt="ben10">
+                <span class="benefits__text">Erhöhte Betriebssicherheit</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FEATURE -->
+
+<div class="features container-fluid mt-0 mt-sm-5">
+    <div class="d-flex justify-content-center m-5">
+        <h3>HAUPTMERKMALE</h3>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 d-flex flex-column gap-4">
+            <div class="d-flex">
+                <div class="me-3">①</div>
+                <div>25 verschiedene Modelle von <b>6 kW bis 600 kW</b> Kühlleistung</div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">②</div>
+                <div>Volumenströme von <b>1,5 m³/h bis 140 m³/h</b></div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">③</div>
+                <div>Auswahl aus <b>50 verschiedenen Prozesspumpen</b> im Hochfluss- und Hochdruckbereich</div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">④</div>
+                <div>Kompakteinheiten mit <b>integrierten Pumpen, Drucktanks, Filtern, Steuerungen</b> (optional mit
+                    Reservepumpe)
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑤</div>
+                <div><b>Mikrochannel Verflüssiger</b> für höchste Energieeffizienz</div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑥</div>
+                <div>Mit optionalen <b>Kompressor Schallschutzummantelungen</b></div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑦</div>
+                <div><b>Schallmindernde Ventilatortechnik</b> erhältlich</div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 d-flex flex-column gap-4">
+            <div class="d-flex">
+                <div class="me-3">⑧</div>
+                <div><b>Scroll, Multiscroll</b> und <b>Schraubenkompressoren</b> (optional mit Frequenzumrichter)
+                    erhältlich
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑨</div>
+                <div><b>Automatische Leistungssteuerung</b> für Prozesse mit variabler Kühllast</div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑩</div>
+                <div><b>Kleine Kältemittelvolumen</b> dank extrakompakter Bauweise</div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑪</div>
+                <div>Auswahl aus <b>verschiedenen Low-GWP Kältemitteln, u.a. R513a, R1234ze und R290 (Propan)</b></div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑫</div>
+                <div>Mit <b>automatischen Glykol Nachfüllsystemem</b></div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑬</div>
+                <div>Mit <b>Remote HMI</b></div>
+            </div>
+            <div class="d-flex">
+                <div class="me-3">⑭</div>
+                <div><b>Erhöhte Betriebssicherheit mit bis zu 4 Kühlkreisläufen</b> pro Maschine</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- GALLERY -->
+
+<div class="gallery container-fluid d-flex flex-column align-items-center mt-0 mt-sm-5">
+    <div class="d-flex justify-content-center mt-5 mt-sm-5 mb-2 mb-sm-5">
+        <h3>BILDER</h3>
+    </div>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/gallery.png" class="d-block w-100" alt="gallery">
+            </div>
+            <div class="carousel-item">
+                <img src="images/gallery.png" class="d-block w-100" alt="gallery">
+            </div>
+            <div class="carousel-item">
+                <img src="images/gallery.png" class="d-block w-100" alt="gallery">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+</div>
+
+<!-- LINKS -->
+
+<div class="links container-fluid d-flex flex-column align-items-center mt-5 mb-5">
+    <h3 class="text-center mt-2 mt-sm-5 mb-2 mb-sm-5">BESUCHER DIESER SEITE SUCHTEN AUCH OFT NACH:</h3>
+    <div class="row d-flex">
+        <div class="col-12 col-sm-4">
+            <button class="btn btn-primary btn-lg w-100 m-1">GLYKOLWANNEN</button>
+        </div>
+        <div class="ccol-12 col-sm-4">
+            <button class="btn btn-primary btn-lg w-100 m-1">WASSERAUFBEREITUNG</button>
+        </div>
+        <div class="col-12 col-sm-4">
+            <button class="btn btn-primary btn-lg w-100 m-1">ROHRLEITUNGSBAU</button>
+        </div>
+        <div class="col-12 col-sm-4">
+            <button class="btn btn-primary btn-lg w-100 m-1">Wärmemengenmessungen</button>
+        </div>
+        <div class="col-12 col-sm-4">
+            <button class="btn btn-primary btn-lg w-100 m-1">ANLAGELEASING</button>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACTS-->
+
+<div class="contacts d-flex flex-column align-items-center">
+    <div class="row d-flex align-items-center m-0 mt-3 mb-4">
+        <div class="col-12 col-sm-3 d-block d-sm-none text-center mt-2 mb-2">
+            <img src="images/logo2.png" alt="logo2">
+        </div>
+        <div class="col-12 col-sm-4 mt-2">
+            <h3 class="contacts__header text-center">Jetzt Termin vereinbaren!</h3>
+        </div>
+        <div class="col-12 col-sm-5 contacts__text">
+            <div>
+                <p>
+                    Gerne stehen wir Ihnen für eine individuelle Beratung telefonisch und vor Ort zur Verfügung und
+                    freuen uns über Ihre Kontaktaufnahme.
+                </p>
+                <p>
+                    Sprechen Sie uns an! Fragen Sie nach einem Rückruf oder kontaktieren Sie uns unter:
+                    <span class="text-primary">info@elsasser-technik.de</span>
+                </p>
+            </div>
+            <button class="contacts__button btn btn-primary btn-lg position-relative mt-3">
+                Kontakt
+                <img class="contacts__button__arrow position-absolute" src="images/arrow.png" alt="arrow">
+            </button>
+        </div>
+        <div class="col-12 col-sm-3 d-none d-sm-block">
+            <img src="images/logo2.png" alt=logo2">
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+
+<footer class="text-sm-start text-muted">
+    <div class="container text-md-start mt-5">
+        <div class="row mt-3 text-nowrap pt-5">
+            <div class="col-12 col-sm-3 mx-auto mb-4">
+                <h6 class="fw-bold mb-4">Elsässer Kältetechnik</h6>
+                <p>Königsallee 14<br>40212 Düsseldorf</p>
+            </div>
+            <div class="col-12 col-sm-4 mx-auto mb-4">
+                <h6 class="fw-bold mb-4">Kontakt</h6>
+                <p>Telefon: <span class="fw-bold">+49 (0) 211 9232 3052</span><br>
+                    E-Mail: <span class="text-primary">info@elsasser-technik.de</span></p>
+            </div>
+            <div class="col-12 col-sm-5 mx-auto mb-4">
+                <h6 class="fw-bold mb-4">Shortlinks</h6>
+                <div class="row">
+                    <p class="col-12 col-sm-6"><a href="#!" class="text-reset">Kontakt</a></p>
+                    <p class="col-12 col-sm-6"><a href="#!" class="text-reset">Rückruf vereinbaren</a></p>
+                    <p class="col-12 col-sm-6"><a href="#!" class="text-reset">Impressum</a></p>
+                    <p class="col-12 col-sm-6"><a href="#!" class="text-reset">Datenschutz</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

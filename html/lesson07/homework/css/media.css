@@ -1,0 +1,78 @@
+@media screen and (max-width: 375px) {
+
+    .container-fluid {
+        width: 375px;
+    }
+
+    .products__text1 {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    .products__head1 {
+        font-size: 34px;
+        line-height: 45px;
+    }
+
+    .products__head2 {
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .goals__text {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    .standards__content {
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: -0.4px;
+        padding: 30px 10px 15px 10px;
+    }
+
+    .box {
+        padding: 30px 0px 30px 0px;
+        border-radius: unset;
+    }
+
+    .box__line {
+        background-color: #656363;
+        margin: 15px 0px 15px 0px;
+        border-radius: unset;
+    }
+
+    .box__line1 {
+        height: 22px;
+        border-radius: unset;
+        background: linear-gradient(to right, rgb(253, 11, 11), rgb(11, 14, 253));
+    }
+
+    .box__line2 {
+        height: 50px;
+        border-radius: unset;
+        background: linear-gradient(to right, rgb(253, 61, 61), rgb(53, 54, 253));
+    }
+
+    .goals__header {
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .goals__text {
+        padding: 40px 10px 20px 25px;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .contacts__text {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+}

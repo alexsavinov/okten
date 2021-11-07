@@ -1,0 +1,183 @@
+.container-fluid {
+    width: 1200px;
+    box-sizing: border-box;
+}
+
+.products__line {
+    height: 5px;
+    width: 227px;
+    background-color: #EDEFF3;
+    border-radius: 10px;
+}
+
+.products__text1 {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: #020303;
+}
+
+.products__text2 {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 32px;
+    color: #45494F;
+}
+
+.products__head1 {
+    font-family: "BBC Reith Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 62px;
+    color: #1652AC;
+}
+
+.products__head2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: #1652AC;
+}
+
+.standards__header {
+    font-family: "BBC Reith Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    color: #FBFDFF;
+}
+
+.standards__content {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 32px;
+    color: #FBFDFF;
+    background: linear-gradient(to right, rgba(22, 61, 162, 0.9), rgba(0, 53, 132, 1));
+    padding: 0px 150px 0px 170px;
+}
+
+.boxes {
+    --bs-gutter-x: 0;
+}
+
+.box {
+    padding: 40px 0px 40px 50px;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.box__line {
+    background-color: #656363;
+    margin: 15px 0px 15px 15px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.box__line1 {
+    height: 22px;
+    border-radius: 10px 0px 0px 0px;
+    background: linear-gradient(to right, rgb(253, 11, 11), rgb(11, 14, 253));
+}
+
+.box__line2 {
+    height: 50px;
+    border-radius: 0px 0px 0px 10px;
+    background: linear-gradient(to right, rgb(253, 61, 61), rgb(53, 54, 253));
+}
+
+.goals__header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #004FC7;
+}
+
+.goals__text {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 32px;
+    color: #45494F;
+    padding: 90px 10px 0px 120px;
+}
+
+.benefits__grid {
+    padding: unset;
+}
+
+.benefits__cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 5px;
+    height: 136px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2)
+}
+
+.benefits__img {
+    height: 45px;
+    margin: 5px;
+}
+
+.benefits__text {
+    display: flex;
+    align-items: start;
+    width: 75%;
+}
+
+.features {
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+
+.carousel {
+    width: 50%;
+}
+
+.contacts {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contacts__header {
+    color: #1652AC
+}
+
+.contacts__text {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: #464C53;
+    /*padding: 30px;*/
+}
+
+.contacts__button {
+    height: 50px;
+    width: 350px;
+}
+
+.contacts__button__arrow {
+    top: 17px;
+    left: 0px;
+}
