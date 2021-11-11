@@ -59,4 +59,6 @@ let v = heightC * Math.pow(dC / 2, 2) * Math.PI;
 //        Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
 let n = 3;
 let m = 4;
-let k = Math.pow(n, 2) + m ** 2;
+let k = Math.sqrt(Math.pow(n, 2) + m ** 2);
+
+console.log(k);
