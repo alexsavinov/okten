@@ -28,7 +28,7 @@ if (day < 11) {
 // - У нас є змінна test, якщо  не дорівнює true, виведіть 'Вірно', інакше виведіть 'Неправильно'.
 // Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)
 //
-let test = true;
+let test = confirm("variable test is true. OK?");
 if (test === true) {
     console.log("Вірно");
 } else {
@@ -87,7 +87,7 @@ year % 4 === 0 ? console.log("Это високосный год") : console.log
 // Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!
 //
 let answer = prompt("Яка «офіційна» назва JavaScript?");
-if (answer === "ECMAScript") {
+if (answer.toLowerCase() === "ECMAScript".toLowerCase()) {
     console.log("Правильно!");
 } else {
     console.log("Не знаєте? ECMAScript!");
