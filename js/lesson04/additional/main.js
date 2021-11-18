@@ -42,7 +42,7 @@ function objectKeys(objects) {
 }
 
 let objectsArray = [{name: 'Dima', age: 13}, {model: 'Camry'}];
-console.log("масив ключів всіх обєктів: " + objectKeys([{name: 'Dima', age: 13}, {model: 'Camry'}]));
+console.log("масив ключів всіх обєктів: " + objectKeys(objectsArray));
 
 
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
