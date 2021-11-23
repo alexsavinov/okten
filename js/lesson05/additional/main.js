@@ -2,7 +2,7 @@
 //
 let naturalis = (n = 10) => {
     // 1
-    result = [];
+    let result = [];
     for (let i = 1; i <= n; i++) {
         result.push(i);
     }
@@ -18,7 +18,7 @@ console.log("все числа от 1 до n: " + naturalis());
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
 //
 let vector = (A = 3, B = 5) => {
-    result = [];
+    let result = [];
     let start = Math.min(A, B);
     let end = Math.max(A, B);
     for (let i = start, n = end; i <= end; i++, n--) {
