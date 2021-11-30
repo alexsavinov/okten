@@ -1,7 +1,7 @@
 // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
 // створити пустий масив, наповнити його 10 об'єктами new User(....)
 //
-function User(id, name, surname , email, phone) {
+function User(id, name, surname, email, phone) {
     this.id = id;
     this.name = name;
     this.surname = surname;
@@ -10,76 +10,16 @@ function User(id, name, surname , email, phone) {
 }
 
 let Users = [
-  {
-    "id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz",
-    "phone": "1-770-736-8031 x56442",
-  },
-  {
-    "id": 2,
-    "name": "Ervin Howell",
-    "username": "Antonette",
-    "email": "Shanna@melissa.tv",
-    "phone": "010-692-6593 x09125",
-  },
-  {
-    "id": 3,
-    "name": "Clementine Bauch",
-    "username": "Samantha",
-    "email": "Nathan@yesenia.net",
-    "phone": "1-463-123-4447",
-  },
-  {
-    "id": 4,
-    "name": "Patricia Lebsack",
-    "username": "Karianne",
-    "email": "Julianne.OConner@kory.org",
-    "phone": "493-170-9623 x156",
-  },
-  {
-    "id": 5,
-    "name": "Chelsey Dietrich",
-    "username": "Kamren",
-    "email": "Lucio_Hettinger@annie.ca",
-    "phone": "(254)954-1289",
-  },
-  {
-    "id": 6,
-    "name": "Mrs. Dennis Schulist",
-    "username": "Leopoldo_Corkery",
-    "email": "Karley_Dach@jasper.info",
-    "phone": "1-477-935-8478 x6430",
-  },
-  {
-    "id": 7,
-    "name": "Kurtis Weissnat",
-    "username": "Elwyn.Skiles",
-    "email": "Telly.Hoeger@billy.biz",
-    "phone": "210.067.6132",
-  },
-  {
-    "id": 8,
-    "name": "Nicholas Runolfsdottir V",
-    "username": "Maxime_Nienow",
-    "email": "Sherwood@rosamond.me",
-    "phone": "586.493.6943 x140",
-  },
-  {
-    "id": 9,
-    "name": "Glenna Reichert",
-    "username": "Delphine",
-    "email": "Chaim_McDermott@dana.io",
-    "phone": "(775)976-6794 x41206",
-  },
-  {
-    "id": 10,
-    "name": "Clementina DuBuque",
-    "username": "Moriah.Stanton",
-    "email": "Rey.Padberg@karina.biz",
-    "phone": "024-648-3804",
-  }
+    new User(1, "Leanne Graham", "Bret", "Sincere@april.biz", "1-770-736-8031 x56442"),
+    new User(2, "Ervin Howell", "Antonette", "Shanna@melissa.tv", "010-692-6593 x09125"),
+    new User(3, "Clementine Bauch", "Samantha", "Nathan@yesenia.net", "1-463-123-4447"),
+    new User(4, "Patricia Lebsack", "Karianne", "Julianne.OConner@kory.org", "493-170-9623 x156"),
+    new User(5, "Chelsey Dietrich", "Kamren", "Lucio_Hettinger@annie.ca", "(254)954-1289"),
+    new User(6, "Mrs. Dennis Schulist", "Leopoldo_Corkery", "Karley_Dach@jasper.info", "1-477-935-8478 x6430"),
+    new User(7, "Kurtis Weissnat", "Elwyn.Skiles", "Telly.Hoeger@billy.biz", "210.067.6132"),
+    new User(8, "Nicholas Runolfsdottir V", "Maxime_Nienow", "Sherwood@rosamond.me", "586.493.6943 x140"),
+    new User(9, "Glenna Reichert", "Delphine", "Chaim_McDermott@dana.io", "(775)976-6794 x41206"),
+    new User(10, "Clementina DuBuque", "Moriah.Stanton", "Rey.Padberg@karina.biz", "024-648-3804")
 ]
 
 console.log("створити пустий масив, наповнити його 10 об'єктами new User(....):");

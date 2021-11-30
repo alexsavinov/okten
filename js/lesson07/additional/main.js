@@ -292,7 +292,7 @@ function userCard(i) {
                 credits: credits,
                 operationTime: currentDate.toISOString().replace('T', ', ').replaceAll('-', '/').substring(0, 20)
             }
-        );
+        )
     }
 }
 
