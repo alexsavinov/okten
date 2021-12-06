@@ -1,5 +1,5 @@
-- Є масив :
-
+// - Є масив :
+//
 let usersList = [
     {
         id: 1,
@@ -232,5 +232,27 @@ let usersList = [
         }
     }
 ];
+// Створити під кожен елемент окремий блок.
+// В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
+//
+function displayElements(elements, level = 0, node = document.body, key = 'wrap') {
+    level++;
+    const div = document.createElement('div');
+    if (typeof elements === 'object') {
+        div.classList.add(key);
+        if (level === 2) {
+            div.style.paddingBottom = '15px';
+        } else if (level > 2) {
+            div.style.paddingLeft = '15px';
+        }
+        for (const element in elements) {
+            displayElements(elements[element], level, div, element);
+        }
+    } else {
+        div.innerText = key + ': ' + elements;
+        div.classList.add(key ? key : undefined);
+    }
+    node.appendChild(div);
+}
 
-Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
+displayElements(usersList);

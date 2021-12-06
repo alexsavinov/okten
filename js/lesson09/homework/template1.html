@@ -10,5 +10,24 @@
 <body>
 <ul class="menu"></ul>
 
+<script>
+    // - Є масив:
+    // ['Main','Products','About us','Contacts']
+    // Взяти файл template1.html та додати в нього скріпт котрий для кожного
+    // елементу масиву створює li та додає його до блоку .menu
+    // Завдання робити через цикли.
+    //
+    const arr = ['Main', 'Products', 'About us', 'Contacts'];
+    const menu = document.getElementsByClassName('menu')[0];
+    menu.style.border = "thin solid #0000FF";
+    menu.style.padding = "10px 10px 10px 40px";
+    arr.forEach(value => {
+        const li = document.createElement('li');
+        li.innerText = value;
+        menu.appendChild(li);
+    });
+</script>
+
+<script src="main.js"></script>
 </body>
 </html>

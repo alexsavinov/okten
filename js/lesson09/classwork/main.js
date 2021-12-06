@@ -1,4 +1,4 @@
-- є масив
+// - є масив
 let simpsons = [
     {
         name: 'Bart',
@@ -36,13 +36,44 @@ let simpsons = [
         photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
     },
 ];
-Проітерувати його, створиши для кожного елементу масиву <div class='member'>.
+// Проітерувати його, створиши для кожного елементу масиву <div class='member'>.
+//
+simpsons.forEach(value => {
+    const div = document.createElement('div');
+    div.classList.add('member');
+    div.innerText = `${value.name} ${value.surname} - ${value.age}`;
+    document.body.appendChild(div);
+});
 
 
-- взяти попередній масив з сімпсонами.
-Проітерувати його, створиши для кожного елементу масиву <div class='member'>. Для кожної властивості елементу створити окремий блок, та помістити його у div.member
+// - взяти попередній масив з сімпсонами.
+// Проітерувати його, створиши для кожного елементу масиву <div class='member'>.
+// Для кожної властивості елементу створити окремий блок, та помістити його у div.member
+//
+simpsons.forEach(value => {
+    const div = document.createElement('div');
+    div.classList.add('member');
+    div.style.backgroundColor = "lightblue";
+    div.style.padding = "10px";
+    div.style.margin = "10px";
+    div.style.borderRadius = "10px";
+    const divName = document.createElement('div');
+    divName.innerText = `Name: ${value.name}`;
+    const divSurname = document.createElement('div');
+    divSurname.innerText = `Surname: ${value.surname}`;
+    const divAge = document.createElement('div');
+    divAge.innerText = `Age: ${value.age}`;
+    const pInfo = document.createElement('p');
+    pInfo.innerText = value.info;
+    const img = document.createElement('img');
+    img.src = value.photo;
 
-- Є масив
+    div.append(divName, divSurname, divAge, img, pInfo);
+    document.body.appendChild(div);
+});
+
+
+// - Є масив
 let coursesArray = [
     {
         title: 'JavaScript Complex',
@@ -112,5 +143,53 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
-Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
-Приклад структири знаходиться у файлі example.png
+// Створити для кожного елементу масиву свій блок, блок розділити блоками,
+// в яких будуть зберігатись значення окремих властивостей,
+// для властивості modules зробити список з елементами
+// Приклад структири знаходиться у файлі example.png
+//
+coursesArray.forEach(value => {
+    const div = document.createElement('div');
+    div.style.padding = "10px";
+    div.style.margin = "10px";
+
+    const divTitle = document.createElement('div');
+    divTitle.innerText = value.title;
+    divTitle.style.fontSize = '22px';
+    divTitle.style.padding = '5px';
+    divTitle.style.margin = "1px";
+
+    const divDuration = document.createElement('div');
+    divDuration.style.display = 'flex';
+
+    const divMonthDuration = document.createElement('div');
+    divMonthDuration.innerText = `months: ${value.monthDuration}`;
+    divMonthDuration.style.backgroundColor = 'lightgreen';
+    divMonthDuration.style.width = '25%';
+    divMonthDuration.style.flexDirection = 'column';
+    divMonthDuration.style.padding = '5px';
+    divMonthDuration.style.margin = "1px";
+    divMonthDuration.style.borderRadius = "5px";
+
+    const divHourDuration = document.createElement('div');
+    divHourDuration.innerText = `hours: ${value.hourDuration}`;
+    divHourDuration.style.backgroundColor = 'lightblue';
+    divHourDuration.style.width = '75%';
+    divHourDuration.style.padding = '5px';
+    divHourDuration.style.margin = "1px";
+    divHourDuration.style.borderRadius = "5px";
+
+    const ulModules = document.createElement('ul');
+    ulModules.style.margin = "1px";
+    for (const module of value.modules) {
+        const li = document.createElement('li');
+        li.innerText = module;
+        li.style.padding = '3px';
+        ulModules.appendChild(li);
+    }
+
+    divDuration.append(divMonthDuration, divHourDuration);
+    div.append(divTitle, divDuration, ulModules);
+
+    document.body.appendChild(div);
+});
