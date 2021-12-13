@@ -79,12 +79,21 @@ btn2.innerText = 'Save to localStorage';
 btn2.style.padding = '5px';
 btn2.style.margin = '5px';
 btn2.onclick = () => {
-    let car = {
-        'model': inputModel.value,
-        'type': inputType.value,
-        'volume': inputVolume.value
-    };
-    localStorage.setItem('car', JSON.stringify(car));
+    let carArray = JSON.parse(localStorage.getItem('car')) || [];
+    if (!carArray.find(value =>
+        value.model === inputModel.value &&
+        value.type === inputType.value &&
+        value.volume === inputVolume.value)) {
+
+        let carObj = {
+            'model': inputModel.value,
+            'type': inputType.value,
+            'volume': inputVolume.value
+        };
+        carArray.push(carObj);
+
+        localStorage.setItem('car', JSON.stringify(carArray));
+    }
 
     [inputModel.value, inputType.value, inputVolume.value] = [null, null, null];
 }
