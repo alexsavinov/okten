@@ -3,7 +3,6 @@
 // https://jsonplaceholder.typicode.com/posts
 // зробити кнопку до кожного поста. при кліку на яку виводяться в окремий блок всі коментарі поточного поста
 //
-
 const wrapperPosts = document.createElement('div');
 wrapperPosts.classList.add('container-fluid', 'g-0');
 document.body.appendChild(wrapperPosts);

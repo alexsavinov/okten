@@ -1,39 +1,10 @@
 // 1.
-// Отримати відповідь з цього ресурсу відповідь, та вивести
-// в документ як в прикладі на занятті
+// Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті
 // https://jsonplaceholder.typicode.com/users
-// кожному елементу юзера створити кнопку, при клику на яку
-// в окремий блок виводяться всі пости поточного юзера.
-// Кожному елементу post створити кнопку, при клику на яку
-// в окремий блок виводяться всі коментарі поточного поста
+// кожному елементу юзера створити кнопку, при клику на яку в окремий блок виводяться всі пости поточного юзера.
+// Кожному елементу post створити кнопку, при клику на яку в окремий блок виводяться всі коментарі поточного поста
 //
-
-// {
-//   "id": 1,
-//   "name": "Leanne Graham",
-//   "username": "Bret",
-//   "email": "Sincere@april.biz",
-//   "address": {
-//     "street": "Kulas Light",
-//     "suite": "Apt. 556",
-//     "city": "Gwenborough",
-//     "zipcode": "92998-3874",
-//     "geo": {
-//       "lat": "-37.3159",
-//       "lng": "81.1496"
-//     }
-//   },
-//   "phone": "1-770-736-8031 x56442",
-//   "website": "hildegard.org",
-//   "company": {
-//     "name": "Romaguera-Crona",
-//     "catchPhrase": "Multi-layered client-server neural-net",
-//     "bs": "harness real-time e-markets"
-//   }
-// },
-
 const wrapUsers = document.createElement('div');
-// wrapUsers.classList.add('container-fluid', 'g-0');
 wrapUsers.classList.add('container-fluid', 'g-0');
 document.body.appendChild(wrapUsers);
 
@@ -61,7 +32,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
             divUserHeader.append(divId, divName);
 
             // UserBody
-
             const divUserBody = document.createElement('div');
             divUserBody.style.fontSize = '12px';
             divUserBody.classList.add('card-body', 'p-1');
@@ -161,12 +131,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
                         while (wrapPosts.firstChild) {
                             wrapPosts.removeChild(wrapPosts.firstChild);
                         }
-  // {
-  //   "userId": 1,
-  //   "id": 1,
-  //   "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-  //   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-  // },
+
                         for (const post of posts) {
                             const divPost = document.createElement('div');
                             divPost.classList.add('post', 'border', 'm-1', 'rounded', 'p-2');
@@ -181,113 +146,77 @@ fetch('https://jsonplaceholder.typicode.com/users')
                             divTitle.innerText = `title: ${post.title}`;
 
                             const divBody = document.createElement('div');
-                            // divBody.classList.add('border');
                             divBody.innerText = `body: ${post.body}`;
 
-                            divPost.append(divPostId, divTitle, divBody);
-                            // , divTitle, divBody, btnComments, wrapComments);
-                            // wrapPosts.appendChild(divPost);
+                            // Comments
+                            const wrapComments = document.createElement('div');
+                            wrapComments.classList.add('comments', 'collapse', 'hide');
+                            wrapComments.setAttribute('id', `comments-${post.id}`);
+
+                            const divBtnComments = document.createElement('div');
+                            divBtnComments.classList.add('d-flex');
+
+                            const btnComments = document.createElement('button');
+                            btnComments.classList.add('btn', 'btn-primary', 'btn-sm', 'border', 'm-2');
+                            btnComments.innerText = 'Comments';
+                            btnComments.setAttribute('type', 'button');
+                            btnComments.setAttribute('data-bs-toggle', 'collapse');
+                            btnComments.setAttribute('data-bs-target', `#comments-${post.id}`);
+                            btnComments.setAttribute('aria-expanded', 'false');
+                            btnComments.setAttribute('aria-controls', `comments-${post.id}`);
+
+                            divBtnComments.appendChild(btnComments);
+
+                            divPost.append(divPostId, divTitle, divBody, divBtnComments, wrapComments);
+
+                            // ** COMMENTS
+                            btnComments.onclick = (e) => {
+                                // don't fetch while collapsing
+                                if (e.target.classList.contains('collapsed')) {
+                                    return;
+                                }
+
+                                fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
+                                    .then(response => response.json())
+                                    .then(comments => {
+                                        while (wrapComments.firstChild) {
+                                            wrapComments.removeChild(wrapComments.firstChild);
+                                        }
+
+                                        for (const comment of comments) {
+                                            const divComment = document.createElement('div');
+                                            divComment.classList.add('comment', 'm-1', 'rounded', 'p-2');
+                                            wrapComments.appendChild(divComment);
+
+                                            const divCommentId = document.createElement('div');
+                                            divCommentId.classList.add('badge', 'bg-success');
+                                            divCommentId.innerText = `comment id: ${comment.id}`;
+
+                                            const divPostId = document.createElement('div');
+                                            divPostId.classList.add('badge', 'bg-secondary', 'ms-1');
+                                            divPostId.innerText = `post id: ${comment.postId}`;
+
+                                            const divName = document.createElement('div');
+                                            divName.classList.add('h6');
+                                            divName.innerText = comment.name;
+                                            divName.style.fontSize = '14px';
+
+                                            const divEmail = document.createElement('div');
+                                            divEmail.classList.add('badge', 'bg-warning', 'text-dark');
+                                            divEmail.innerText = comment.email;
+                                            divEmail.style.fontSize = '10px';
+
+                                            const divBody = document.createElement('div');
+                                            divBody.classList.add('bg-light', 'p-1', 'rounded');
+                                            divBody.innerText = comment.body;
+                                            divBody.style.fontSize = '12px';
+
+                                            divComment.append(divCommentId, divPostId, divName, divEmail, divBody);
+                                        }
+                                    });
+                            }
                         }
-
-
                     })
             };
-
-
-//             btnComments.onclick = () => {
-//                 fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
-//                     .then(response => response.json())
-//                     .then(comments => {
-//                         while (wrapComments.firstChild) {
-//                             wrapComments.removeChild(wrapComments.firstChild);
-//                         }
-//
-//                         for (const comment of comments) {
-
         }
     });
-//
-//
-// const wrapPosts = document.createElement('div');
-// wrapPosts.classList.add('container-fluid', 'g-0');
-// document.body.appendChild(wrapPosts);
-//
-// fetch('https://jsonplaceholder.typicode.com/posts')
-//     .then(response => response.json())
-//     .then(posts => {
-//         for (const post of posts) {
-//             const divPost = document.createElement('div');
-//             divPost.classList.add('post', 'm-1', 'rounded', 'p-2');
-//             wrapPosts.appendChild(divPost);
-//
-//             const divId = document.createElement('div');
-//             divId.classList.add('badge', 'bg-primary');
-//             divId.innerText = `post id: ${post.id}`;
-//
-//             const divTitle = document.createElement('div');
-//             divTitle.classList.add('h6');
-//             divTitle.innerText = post.title;
-//
-//             const divBody = document.createElement('div');
-//             divBody.classList.add('bg-light', 'p-1', 'rounded');
-//             divBody.innerText = post.body;
-//             divBody.style.fontSize = '12px';
-//
-//             const wrapComments = document.createElement('div');
-//             wrapComments.classList.add('comments', 'collapse', 'hide');
-//             wrapComments.setAttribute('id', `comments-${post.id}`);
-//
-//             const btnComments = document.createElement('button');
-//             btnComments.classList.add('btn', 'btn-secondary', 'mt-2');
-//             btnComments.innerText = 'Comments';
-//             btnComments.setAttribute('type', 'button');
-//             btnComments.setAttribute('data-bs-toggle', 'collapse');
-//             btnComments.setAttribute('data-bs-target', `#comments-${post.id}`);
-//             btnComments.setAttribute('aria-expanded', 'false');
-//             btnComments.setAttribute('aria-controls', `comments-${post.id}`);
-//
-//             divPost.append(divId, divTitle, divBody, btnComments, wrapComments);
-//
-//             btnComments.onclick = () => {
-//                 fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
-//                     .then(response => response.json())
-//                     .then(comments => {
-//                         while (wrapComments.firstChild) {
-//                             wrapComments.removeChild(wrapComments.firstChild);
-//                         }
-//
-//                         for (const comment of comments) {
-//                             const divComment = document.createElement('div');
-//                             divComment.classList.add('comment', 'm-1', 'rounded', 'p-2');
-//                             wrapComments.appendChild(divComment);
-//
-//                             const divCommentId = document.createElement('div');
-//                             divCommentId.classList.add('badge', 'bg-success');
-//                             divCommentId.innerText = `comment id: ${comment.id}`;
-//
-//                             const divPostId = document.createElement('div');
-//                             divPostId.classList.add('badge', 'bg-secondary', 'ms-1');
-//                             divPostId.innerText = `post id: ${comment.postId}`;
-//
-//                             const divName = document.createElement('div');
-//                             divName.classList.add('h6');
-//                             divName.innerText = comment.name;
-//                             divName.style.fontSize = '14px';
-//
-//                             const divEmail = document.createElement('div');
-//                             divEmail.classList.add('badge', 'bg-warning', 'text-dark');
-//                             divEmail.innerText = comment.email;
-//                             divEmail.style.fontSize = '10px';
-//
-//                             const divBody = document.createElement('div');
-//                             divBody.classList.add('bg-light', 'p-1', 'rounded');
-//                             divBody.innerText = comment.body;
-//                             divBody.style.fontSize = '12px';
-//
-//                             divComment.append(divCommentId, divPostId, divName, divEmail, divBody);
-//                         }
-//                     });
-//             }
-//
-//         }
-//     });

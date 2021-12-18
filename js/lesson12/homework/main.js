@@ -41,7 +41,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 // Всі характеристики повинні мати свої блоки всередені div.comment
 // https://jsonplaceholder.typicode.com/comments
 //
-
 const wrapperComments = document.createElement('div');
 wrapperComments.classList.add('container-fluid', 'g-0');
 document.body.appendChild(wrapperComments);
