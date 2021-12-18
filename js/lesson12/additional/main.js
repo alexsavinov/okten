@@ -61,6 +61,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             divUserHeader.append(divId, divName);
 
             // UserBody
+
             const divUserBody = document.createElement('div');
             divUserBody.style.fontSize = '12px';
             divUserBody.classList.add('card-body', 'p-1');
@@ -129,7 +130,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             // Posts
             const wrapPosts = document.createElement('div');
             wrapPosts.classList.add('posts', 'collapse', 'hide');
-            wrapPosts.setAttribute('id', `users-${user.id}`);
+            wrapPosts.setAttribute('id', `posts-${user.id}`);
 
             const divBtnPosts = document.createElement('div');
             divBtnPosts.classList.add('d-flex');
@@ -148,9 +149,11 @@ fetch('https://jsonplaceholder.typicode.com/users')
             divUser.append(divUserHeader, divUserBody, divBtnPosts, wrapPosts);
 
             // ** POSTS
-            btnPosts.onclick = () => {
-                console.log(wrapPosts.classList);
-
+            btnPosts.onclick = (e) => {
+                // don't fetch while collapsing
+                if (e.target.classList.contains('collapsed')) {
+                    return;
+                }
 
                 fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`)
                     .then(response => response.json())
@@ -158,17 +161,30 @@ fetch('https://jsonplaceholder.typicode.com/users')
                         while (wrapPosts.firstChild) {
                             wrapPosts.removeChild(wrapPosts.firstChild);
                         }
-
+  // {
+  //   "userId": 1,
+  //   "id": 1,
+  //   "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  //   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  // },
                         for (const post of posts) {
                             const divPost = document.createElement('div');
-                            divPost.classList.add('post', 'm-1', 'rounded', 'p-2');
+                            divPost.classList.add('post', 'border', 'm-1', 'rounded', 'p-2');
                             wrapPosts.appendChild(divPost);
 
                             const divPostId = document.createElement('div');
-                            divPostId.classList.add('badge', 'bg-primary');
+                            divPostId.classList.add('badge', 'bg-secondary');
                             divPostId.innerText = `post id: ${post.id}`;
 
-                            divPost.append(divPostId);
+                            const divTitle = document.createElement('div');
+                            divTitle.classList.add('h6');
+                            divTitle.innerText = `title: ${post.title}`;
+
+                            const divBody = document.createElement('div');
+                            // divBody.classList.add('border');
+                            divBody.innerText = `body: ${post.body}`;
+
+                            divPost.append(divPostId, divTitle, divBody);
                             // , divTitle, divBody, btnComments, wrapComments);
                             // wrapPosts.appendChild(divPost);
                         }
