@@ -91,8 +91,12 @@ btnSave.onclick = (e) => {
 
         divAlert.appendChild(btnAlertClose);
 
-        alerts = form.getElementsByClassName('alert');
-        form.insertBefore(divAlert, alerts[0]);
+        form.insertBefore(divAlert, form.getElementsByClassName('alert')[0]);
+
+        inputName.value = null;
+        inputQuantity.value = null;
+        inputPrice.value = null;
+        inputPic.value = null;
     }
 }
 

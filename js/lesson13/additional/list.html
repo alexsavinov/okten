@@ -16,7 +16,7 @@
 
 <script>
     const wrapper = document.createElement('div');
-    wrapper.classList.add('container', 'g-0');
+    wrapper.classList.add('container-fluid', 'g-0');
 
     // navigation
     nav = document.createElement('nav');
@@ -111,13 +111,11 @@
             tr.remove();
             goods.splice(goods.indexOf(goods.find(value => value.name === item.name)), 1);
             localStorage.setItem('goods', JSON.stringify(goods));
-            showAlert(`Item <b>${item.name}<b> deleted!`, wrapper);
+            showAlert(`Item <b>${item.name}</b> deleted!`, wrapper);
         }
     });
 
     function showAlert(message = '', parentElement) {
-
-
         const divAlert = document.createElement('div');
         divAlert.classList.add('alert', 'alert-warning', 'alert-dismissible', 'fade', 'show', 'm-3');
         divAlert.innerHTML = message;
@@ -130,8 +128,7 @@
 
         divAlert.appendChild(btnAlertClose);
 
-        alerts = parentElement.getElementsByClassName('alert');
-        parentElement.insertBefore(divAlert, alerts[0]);
+        parentElement.insertBefore(divAlert, parentElement.getElementsByClassName('alert')[0]);
     }
 </script>
 
