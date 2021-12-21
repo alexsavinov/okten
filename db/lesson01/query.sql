@@ -22,10 +22,10 @@ select * from cars where model = 'bmw' and year < 2014;
 select * from cars where model = 'audi' and year > 2014;
 
 -- найти первые 5 машин
-elect * from cars order by id limit 5;
+select * from cars order by id limit 5;
 
 -- найти последнии 5 машин
-elect * from cars order by id desc limit 5;
+select * from cars order by id desc limit 5;
 
 -- найти среднее арифметическое цен машин модели KIA
 select avg(price) as avg_price from cars where model = 'kia';
