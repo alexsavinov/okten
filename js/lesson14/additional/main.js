@@ -59,48 +59,126 @@ function sleep() {
 }
 
 
-setTimeout(() => {
-    showMessage(wakeup());
-    setTimeout(() => {
-        showMessage(breakfast());
-        setTimeout(() => {
-            showMessage(shower());
-            setTimeout(() => {
-                showMessage(work1());
-                setTimeout(() => {
-                    showMessage(lunch());
-                    setTimeout(() => {
-                        showMessage(work2());
-                        setTimeout(() => {
-                            showMessage(rest());
-                            setTimeout(() => {
-                                showMessage(study());
-                                setTimeout(() => {
-                                    showMessage(dinner());
-                                    setTimeout(() => {
-                                        showMessage(sleep());
-                                    }, 10000 * Math.random());
-                                }, 10000 * Math.random());
-                            }, 10000 * Math.random());
-                        }, 10000 * Math.random());
-                    }, 10000 * Math.random());
-                }, 10000 * Math.random());
-            }, 10000 * Math.random());
-        }, 10000 * Math.random());
-    }, 10000 * Math.random());
-}, 10000 * Math.random());
+// setTimeout(() => {
+//     showMessage(wakeup());
+//     setTimeout(() => {
+//         showMessage(breakfast());
+//         setTimeout(() => {
+//             showMessage(shower());
+//             setTimeout(() => {
+//                 showMessage(work1());
+//                 setTimeout(() => {
+//                     showMessage(lunch());
+//                     setTimeout(() => {
+//                         showMessage(work2());
+//                         setTimeout(() => {
+//                             showMessage(rest());
+//                             setTimeout(() => {
+//                                 showMessage(study());
+//                                 setTimeout(() => {
+//                                     showMessage(dinner());
+//                                     setTimeout(() => {
+//                                         showMessage(sleep());
+//                                     }, 10000 * Math.random());
+//                                 }, 10000 * Math.random());
+//                             }, 10000 * Math.random());
+//                         }, 10000 * Math.random());
+//                     }, 10000 * Math.random());
+//                 }, 10000 * Math.random());
+//             }, 10000 * Math.random());
+//         }, 10000 * Math.random());
+//     }, 10000 * Math.random());
+// }, 10000 * Math.random());
 
 function showMessage(message = '') {
     let d = new Date();
     console.log(d.toLocaleString(), message);
 }
 
+// goWork(true)
+//   .then(payment => {
+//     return flyToEgipit(payment) // 9999sec //1
+//   })
+//   .then(result => {
+//     console.log(result);
+//   })
+//   .catch(e => {
+//     console.error(e)
+//   })
+//   .finally(() => {
+//     console.log('FINAL')
+//   })
 
 
-
-function wakeupPromise() {
-    return 'wakeup';
+function act1() {
+    setTimeout(() => {
+        console.log('1 Проснулся');
+    }, 3000);
 }
+
+function act2() {
+    setTimeout(() => {
+        console.log('2 Позавтракал');
+    }, 2000);
+}
+
+function act3() {
+    setTimeout(() => {
+        console.log('3 Лег спать');
+    }, 5000);
+}
+
+function callBackFunc(value, callback) {
+    if (typeof value === 'function') {
+        value();
+        callback(null, 'All is good...')
+    } else {
+        callback('Have a trouble...', null)
+    }
+}
+
+callBackFunc(act1, (error, data) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(data);
+        callBackFunc(act2, (error, data) => {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log(data);
+                callBackFunc(act3, (error, data) => {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log(data);
+                        console.log('Hell day is Over..')
+                    }
+                });
+            }
+        });
+    }
+});
+
+// wakeup()
+//     .then(m => {
+//             showMessage(m);
+//             return breakfast();
+//         }
+//     )
+//     .then(m => {
+//         showMessage(m);
+//         return shower();
+//     })
+//     .finnaly(() => {
+//             console.log('end');
+//         }
+//     );
+// ;
+//
+// function wakeupPromise() {
+//     return 'wakeup';
+// }
 
 
 // async function day() {

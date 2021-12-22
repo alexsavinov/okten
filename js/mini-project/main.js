@@ -1,109 +1,90 @@
-// - Імітуємо наповнення інтернет магазину товарами :
-// Створити форму з наступними полями :
-// - назва товару
-// - кількість товару
-// - ціна товару
-// - картинка товару (посилання з інтернету)
-// Зберігати товари в масив в локалсорадж.
-// При збережені товару з форми, action не повинно відбуватись (preventDefault).
-// Cтворити елемент <a href='list.html'>На сторінку товарів</a>, та list.html,
-// при переході на який відобразити на сторінці всі товари.
-// На сторінці list.html побудувати кнопку яка видаляє всі товари з корзини та локалстораджа.
-// До кожного товару додати кнопку, при кліку на яку з лс видаляється конкретний обраний товар.
+// В index.html
+// 1 получить массив объектов user с endpoint`а https://jsonplaceholder.typicode.com/users
+// 2 Вывести id,name всех user в index.html. Отдельный блок для каждого user.
+// 3 Добавить каждому блоку кнопку/ссылку , при клике на которую происходит переход на страницу user-details.html,
+// которая имеет детальную информацию про объект на который кликнули
 //
+//
+// На странице user-details.html:
+// 4 Вывести всю, без исключения, информацию про объект user на кнопку/ссылку которого был совершен клик ранее.
+// 5 Добавить кнопку "post of current user", при клике на которую, появляются title всех постов текущего юзера
+// (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
+// 6 Каждому посту добавить кнопку/ссылку, при клике на которую происходит переход на страницу post-details.html,
+// которая имеет детальную информацию про текущий пост.
+//
+// На странице post-details.html:
+// 7 Вывести всю, без исключения, информацию про объект post на кнопку/ссылку которого был совершен клик ранее.
+// 8 Ниже информации про пост, вывести все комментарии текущего поста (эндпоинт для получения информации -
+// https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
+//
+// Стилизация проекта -
+// index.html - все блоки с user - по 2 в ряд. кнопки/ссылки находяться под информацией про user.
+// user-details.html - блок с информацией про user вверху страницы.
+// Кнопка ниже, на 90% ширины страницы, по центру.
+// блоки с краткой информацией про post - в ряд по 5 объектов.
+// post-details.html - блок с информацией про пост вверху. Комментарии - по 4 в ряд.
+// Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так,
+// что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)
+//
+
+
 const wrapper = document.createElement('div');
 wrapper.classList.add('m-0');
+document.body.appendChild(wrapper);
 
 // navigation
 nav = document.createElement('nav');
-nav.classList.add('nav', 'bg-light');
+nav.classList.add('nav', 'bg-light', 'border-bottom');
 
-navAdd = document.createElement('a');
-navAdd.classList.add('nav-link', 'disabled');
-navAdd.setAttribute('href', '#');
-navAdd.innerText = 'Add new';
+navHome = document.createElement('a');
+navHome.classList.add('nav-link');
+navHome.setAttribute('href', 'index.html');
+navHome.innerText = 'Home';
 
-navList = document.createElement('a');
-navList.classList.add('nav-link');
-navList.setAttribute('href', 'list.html');
-navList.innerText = 'List';
-
-nav.append(navAdd, navList);
+nav.appendChild(navHome);
 wrapper.appendChild(nav);
 
-// form
-const form = document.createElement('form');
-form.classList.add('p-1', 'border');
+const wrapUsers = document.createElement('div');
+wrapUsers.classList.add('row', 'g-0', 'justify-content-evenly');
+wrapper.appendChild(wrapUsers);
 
-const formGroup = document.createElement('div');
-formGroup.classList.add('form-group');
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(users => {
+            for (const user of users) {
 
-const formHeader = document.createElement('div');
-formHeader.classList.add('h3', 'm-2', 'mb-3');
-formHeader.innerText = 'Adding new goods';
+                const divUser = document.createElement('div');
+                divUser.classList.add('user', 'card', 'm-2', 'col-5', 'bg-white', 'border-secondary');
+                wrapUsers.appendChild(divUser);
 
-const inputName = document.createElement('input');
-inputName.classList.add('form-control', 'form-control-sm', 'm-2');
-inputName.setAttribute('type', 'text');
-inputName.setAttribute('placeholder', 'Name');
+                // UserHeader
+                const divUserHeader = document.createElement('div');
+                divUserHeader.classList.add('card-header', 'p-1');
 
-const inputQuantity = document.createElement('input');
-inputQuantity.classList.add('form-control', 'form-control-sm', 'm-2');
-inputQuantity.setAttribute('type', 'number');
-inputQuantity.setAttribute('placeholder', 'Quantity');
+                const divId = document.createElement('div');
+                divId.classList.add('badge', 'bg-secondary', 'm-1');
+                divId.innerText = `id: ${user.id}`;
 
-const inputPrice = document.createElement('input');
-inputPrice.classList.add('form-control', 'form-control-sm', 'm-2');
-inputPrice.setAttribute('type', 'number');
-inputPrice.setAttribute('placeholder', 'Price');
+                const divName = document.createElement('div');
+                divName.classList.add('badge', 'text-dark');
+                divName.innerText = user.name;
 
-const inputPic = document.createElement('input');
-inputPic.classList.add('form-control', 'form-control-sm', 'm-2');
-inputPic.setAttribute('type', 'text');
-inputPic.setAttribute('placeholder', 'Picture (link)');
+                divUserHeader.append(divId, divName);
+                const btnDetails = document.createElement('a');
+                btnDetails.classList.add('btn', 'btn-outline-primary', 'm-2');
+                btnDetails.innerText = 'User details';
+                btnDetails.onclick = () => {
+                    localStorage.setItem('userId', user.id);
+                    location.href = 'user-details.html';
+                }
 
-const btnSave = document.createElement('button');
-btnSave.classList.add('btn', 'btn-primary', 'm-2');
-btnSave.innerText = 'Save';
+                divUser.append(divUserHeader, btnDetails);
+            }
+        }
+    )
 
-btnSave.onclick = (e) => {
-    e.preventDefault();
 
-    let goods = JSON.parse(localStorage.getItem('goods')) || [];
-    if (inputName.value !== '' && !goods.find(value => value.name === inputName.value)) {
-        goods.push({
-            name: inputName.value,
-            quantity: inputQuantity.value,
-            price: inputPrice.value,
-            picture: inputPic.value
-        });
-        localStorage.setItem('goods', JSON.stringify(goods));
 
-        const divAlert = document.createElement('div');
-        divAlert.classList.add('alert', 'alert-warning', 'alert-dismissible', 'fade', 'show', 'm-1');
-        divAlert.innerHTML = `Item <b>${inputName.value}</b> added!`;
-
-        const btnAlertClose = document.createElement('button');
-        btnAlertClose.classList.add('btn-close');
-        btnAlertClose.type = 'button';
-        btnAlertClose.setAttribute('data-bs-dismiss', 'alert');
-        btnAlertClose.setAttribute('aria-label', 'Close');
-
-        divAlert.appendChild(btnAlertClose);
-
-        form.insertBefore(divAlert, form.getElementsByClassName('alert')[0]);
-
-        inputName.value = null;
-        inputQuantity.value = null;
-        inputPrice.value = null;
-        inputPic.value = null;
-    }
-}
-
-formGroup.append(formHeader, inputName, inputQuantity, inputPrice, inputPic, btnSave);
-form.appendChild(formGroup);
-wrapper.appendChild(form);
-document.body.appendChild(wrapper);
 
 
 
