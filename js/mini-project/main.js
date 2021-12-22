@@ -26,8 +26,6 @@
 // Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так,
 // что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)
 //
-
-
 const wrapper = document.createElement('div');
 wrapper.classList.add('m-0');
 document.body.appendChild(wrapper);
@@ -82,15 +80,3 @@ fetch('https://jsonplaceholder.typicode.com/users')
             }
         }
     )
-
-
-
-
-
-
-
-
-
-
-
-
