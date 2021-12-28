@@ -248,7 +248,7 @@ const divOutput = document.createElement('div');
 divOutput.classList.add('output');
 wrapper.appendChild(divOutput);
 
-// fixed-bottom bd-highlight
+// bottom
 const divBottom = document.createElement('div');
 divBottom.classList.add('fixed-bottom', 'p-2');
 const divProgress = document.createElement('div');
