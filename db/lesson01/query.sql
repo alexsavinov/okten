@@ -43,7 +43,7 @@ select count(id) as count, model from cars group by model order by count(id) des
 select * from cars where model like '_a%a_';
 
 -- найти все машины модели которых больше 8 символов
-select * from cars where model like '_________%';
+select * from cars where length(model) > 8;
 
 -- ***найти машины цена которых больше чем цена среднего арифметического всех машин
 select * from cars where price > (select avg(price) from cars);
