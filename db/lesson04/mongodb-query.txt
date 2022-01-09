@@ -110,7 +110,7 @@ db.getCollection('students_').aggregate([
     {
         $group: {
             _id: '$class',
-            avg: {$avg: '$avgScore' }
+            avg: { $avg: '$avgScore' }
         }
     },
     { $sort: { avg: -1 } },

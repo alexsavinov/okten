@@ -140,6 +140,7 @@ update application join client c on c.idClient = application.Client_idClient
 set Sum = 6000
 where Education = 'high';
 
+
 -- 18. Усіх клієнтів київських відділень пересилити до Києва.
 --
 update client join department d on d.idDepartment = client.Department_idDepartment
@@ -165,6 +166,7 @@ where LastName LIKE '_a%'
    or LastName LIKE '_o%'
    or LastName LIKE '_u%';
 -- where LastName regexp '^.[eyuoa].*';
+
 
 -- 21.Знайти львівські відділення, які видали кредитів на загальну суму більше ніж 5000
 --
@@ -222,6 +224,7 @@ where City = (
     order by count(idapplication) desc
     limit 1
 );
+
 
 -- 27. Місто клієнта з найбільшою кількістю кредитів
 --
